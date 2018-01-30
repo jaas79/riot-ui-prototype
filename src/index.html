@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Aplicación Demo</title>
+</head>
+<body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <app> </app>
+      </div>
+    </div>
+</body>
+</html>
+
+<script>
+  //ocultamos a partir del elemento 1 porque ahi empiezan los tags del contenido
+  //dentro del div contentid
+function toRef(idto){
+      var innerchildren = document.getElementById("contentid").children;
+      for (var i = 1; i < innerchildren.length; i++) {
+               document.getElementById("contentid").children[i].style.display="none";
+      }
+            document.getElementById(idto).style.display = "block";
+}
+</script>
