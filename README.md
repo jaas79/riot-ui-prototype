@@ -15,3 +15,5 @@ Build Production Version:
 ```
 npm run build
 ```
+
+NodeJS Version needed: 7.10.1
