@@ -4,7 +4,7 @@ module.exports = {
     {
       id: 'mantenimientoClientes',
       headers: [
-       { label: 'Número X' },
+       { label: 'Número' },
        { label: 'Nombre completo' },
        { label: 'Crédito autorizado', type: 'currency' }
       ],

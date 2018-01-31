@@ -8,10 +8,10 @@
         <yield/>
       </form>
       <div if={opts.action=='create'}>
-        <submit-button to={ opts.return } caption="Crear"></submit-button>
+        <submit-button to={ opts.return } caption="Guardar"></submit-button>
       </div>
       <div if={opts.action=='update'}>
-        <submit-button to={ opts.return } caption="Editar"></submit-button>
+        <submit-button to={ opts.return } caption="Guardar"></submit-button>
       </div>
       <div if={opts.action=='delete'}>
         <submit-button to={ opts.return } caption="Eliminar"></submit-button>

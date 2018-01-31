@@ -1,9 +1,11 @@
 <menu-item>
-    <li onclick={ goToRef }>{ opts.label }</li>
+  <li onclick={ goToRef }>
+		<a>{ opts.label }</a>
+	</li>
+  <yield/>
 	<script>
 		this.goToRef = function(){
-            toRef(opts.to);
+      toRef(opts.to);
 		};
 	</script>
-    <yield/>
 </menu-item>

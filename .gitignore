@@ -1,5 +1,5 @@
 .npm
 *.log
 npm-debug.log*
-dist
+//dist
 node_modules
