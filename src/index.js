@@ -30,6 +30,8 @@ import './components/menu-section.tag'
 import './components/side-menu.tag'
 import './components/sidebar-menu.tag'
 import './components/sidebar-profile.tag'
+import './components/select-box.tag'
+import './components/option-box.tag'
 
 const json = require('./tabledata.js')
 for (var i = 0; i < json.ids.length; i++) {

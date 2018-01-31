@@ -11,6 +11,17 @@
           <inputbox id="correo"          label="Correo electrónico"    placeholder="p.ej. usuario@mail.com" required=false />
           <inputbox id="comentarios"     label="Comentarios"           placehoder="Ponga aquí cualquier observación importante." required=false   />
 		</panel>
+		<panel label="Tipo de pensión">
+			<select-box id="tipoPension" type="option" placeholder="Selecciona el Tipo de Pensión deseada">
+				<option-box id="ipp" label="Incapacidad Permanente Parcial"/>
+				<option-box id="ipt" label="Incapacidad Permanente Total" />
+			</select-box>
+
+			<select-box id="tipoPension" type="check" placeholder="Selecciona el Tipo de Pensión deseada">
+				<option-box id="ipp" label="Incapacidad Permanente Parcial"/>
+				<option-box id="ipt" label="Incapacidad Permanente Total" />
+			</select-box>
+		</panel>
     </formbox>
 </page>
 </clienteAgregar>
