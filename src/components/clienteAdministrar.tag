@@ -1,4 +1,4 @@
-<clienteAdministrar id="clienteAdministrar">
+<clienteAdministrar>
   <page id="mantenimientoClientes" caption="Mantenimiento de Clientes" title="Mantenimiento de Clientes" description="Administración de Clientes">
       <searchpanel add="cliente_agregar">
          <searchcriteria>
