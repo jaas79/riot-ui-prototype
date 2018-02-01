@@ -1,7 +1,7 @@
 <formbox>
   <div class="x_content">
     <h2 class="page-header">{opts.title}</h2>
-    <form id={opts.id}>
+    <form id={opts.id} data-parsley-validate>
       <yield/>
       <br/>
       <div class="ln_solid"></div>
