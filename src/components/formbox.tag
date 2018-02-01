@@ -4,7 +4,7 @@
          <h2>{opts.title}</h2>
       </div>
       <br>
-      <form id={opts.id}>
+      <form id={opts.id} data-parsley-validate>
         <yield/>
       </form>
       <div if={opts.action=='create'}>
