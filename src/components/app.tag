@@ -1,7 +1,6 @@
 
 <app>
-    <topbar></topbar>
-	<sidebar>
+	<sidebar title="Prototipo IU" icon="fa fa-diamond">
 		<sidebar-profile
 			picture="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
 			name="Juan Pérez González" role="Afiliado"/>
@@ -16,6 +15,7 @@
 			</menu-section>
 		</sidebar-menu>
 	</sidebar>
+  <topbar></topbar>
 	<content>
 		<clienteAdministrar/>
 		<clienteEliminar   />
