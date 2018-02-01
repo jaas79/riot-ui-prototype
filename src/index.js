@@ -32,7 +32,8 @@ import './components/sidebar-menu.tag'
 import './components/sidebar-profile.tag'
 import './components/select-box.tag'
 import './components/option-box.tag'
-
+import './components/form-wizard.tag'
+import './components/step-wizard.tag'
 const json = require('./tabledata.js')
 for (var i = 0; i < json.ids.length; i++) {
   var js = json.ids[i]
@@ -43,10 +44,18 @@ riot.mount('app')
 riot.mount('topbar')
 riot.mount('footerbar')
 riot.mount('searchresults')
-// Ocultamos a partir del componente 2
+// Ocultamos a partir del componente 1
 var innerchildren = document.getElementById('contentid').children
-for (var j = 2; j < innerchildren.length; j++) {
+for (var j = 1; j < innerchildren.length; j++) {
   document.getElementById('contentid').children[j].style.display = 'none'
+}
+
+var contids = ['stepContainer_proyeccionPension']
+for (var c = 0; c < contids.length; c++) {
+  var inners = document.getElementById(contids[c]).children
+  for (var k = 1; k < inners.length; k++) {
+    document.getElementById(contids[c]).children[k].style.display = 'none'
+  }
 }
 // riot.mount('clienteEliminar')
 // riot.mount('resultsheader')

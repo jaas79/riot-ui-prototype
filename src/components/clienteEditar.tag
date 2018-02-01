@@ -1,4 +1,4 @@
-<clienteEditar id="clienteEditar">
+<clienteEditar>
 	<page id="cliente_editar" title="Editar Cliente" caption="Editar Cliente">
 		<formbox title="Datos del Cliente" action="update" return="clienteAdministrar">
 		    <inputbox id="numeroCliente"  label="Número"              value="E009"         required=true />

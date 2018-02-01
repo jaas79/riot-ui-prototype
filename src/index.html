@@ -37,14 +37,56 @@
 <script src="https://colorlib.com/polygon/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
 <script src="https://colorlib.com/polygon/vendors/starrr/dist/starrr.js"></script>
 <script src="https://colorlib.com/polygon/build/js/custom.min.js"></script>
+
+
 <script>
   //ocultamos a partir del elemento 1 porque ahi empiezan los tags del contenido
   //dentro del div contentid
 function toRef(idto){
       var innerchildren = document.getElementById("contentid").children;
-      for (var i = 1; i < innerchildren.length; i++) {
+     for (var i = 1; i < innerchildren.length; i++) {
                document.getElementById("contentid").children[i].style.display="none";
       }
             document.getElementById(idto).style.display = "block";
 }
+
+function gotToRef(idto,idx,containerdid){
+         var innerchildren = document.getElementById(containerdid).children;
+         for (var i = 0; i < innerchildren.length; i++) {
+               document.getElementById(containerdid).children[i].style.display="none";
+         }
+            document.getElementById(idto).style.display = "block";
+            var fid='wizardIndex_'+containerdid
+            localStorage.setItem(fid,idx);
+}
+
+function prev(containerdid){
+         var fid = 'wizardIndex_'+containerdid
+         var fids= 'wizardIds_'+containerdid
+         var i = localStorage.getItem(fid)
+         if (i>0) 
+         {
+           i--
+           localStorage.setItem(fid,i)
+         }
+         var ids = JSON.parse(localStorage.getItem(fids))
+         gotToRef(ids[i].id,i,containerdid)
+}
+
+function next(containerdid){
+         var fid = 'wizardIndex_'+containerdid
+         var fids= 'wizardIds_'+containerdid
+         var i = localStorage.getItem(fid)
+         var ids = JSON.parse(localStorage.getItem(fids))
+         debugger;
+         if (i<ids.length-1) 
+         {
+           i++
+           localStorage.setItem(fid,i)
+         }
+         gotToRef(ids[i].id,i,containerdid) 
+}
 </script>
+
+
+
