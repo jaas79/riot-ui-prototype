@@ -1,20 +1,14 @@
 <app>
-<<<<<<< HEAD
 	<sidebar title="Prototipo IU" icon="fa fa-diamond">
 		<sidebar-profile
 			picture="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
 			name="Juan Pérez González" role="Afiliado"/>
-=======
-    <topbar></topbar>
-	<sidebar>
-		<sidebar-profile picture="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" name="Juan Pérez" role="Administrador"/>
->>>>>>> aabc00bb5e5e5cf0978ae769b45c1dc87690cac2
 		<sidebar-menu>
 			<menu-section title="General">
 				<side-menu icon="fa fa-home" label="Clientes">
 					<menu-item to="clienteAdministrar" label="Mantenimiento de Clientes"/>
 					<menu-item to="clienteAgregar"     label="Alta de Cliente"          />
-					<menu-item to="clienteEliminar"    label="Eliminar Cliente"         />         
+					<menu-item to="clienteEliminar"    label="Eliminar Cliente"         />
 					<menu-item to="clienteEditar"      label="Editar Cliente"           />
 					<menu-item to="proyeccionPension"  label="Wizard"                   />
 				</side-menu>
@@ -24,8 +18,8 @@
   <topbar></topbar>
 	<content>
 		<clienteAdministrar id="clienteAdministrar"/>
-		<clienteEliminar    id="clienteEliminar"   /> 
-		<clienteAgregar     id="clienteAgregar"    /> 
+		<clienteEliminar    id="clienteEliminar"   />
+		<clienteAgregar     id="clienteAgregar"    />
 		<clienteEditar      id="clienteEditar"     />
 		<form-wizard id="proyeccionPension" title="Proyección de Pensión" nextbutton="Siguiente" prevbutton="Anterior" donebutton="Finalizar">
             <step-wizard id="paso1" title="Ingresar Datos">
