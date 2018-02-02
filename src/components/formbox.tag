@@ -8,12 +8,15 @@
       <div class="form-group">
         <div if={opts.action=='create'}>
           <submit-button to={ opts.return } action="create"></submit-button>
+          <submit-button to={ opts.return } action="return"></submit-button>
         </div>
         <div if={opts.action=='update'}>
           <submit-button to={ opts.return } action="update"></submit-button>
+          <submit-button to={ opts.return } action="return"></submit-button>
         </div>
         <div if={opts.action=='delete'}>
           <submit-button to={ opts.return } action="delete"></submit-button>
+          <submit-button to={ opts.return } action="return"></submit-button>
         </div>
       </div>
     </form>

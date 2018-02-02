@@ -13,7 +13,8 @@
       { type: "create", button: { label: "Guardar", class: "btn btn-primary", icon: "fa fa-save" } },
       { type: "update", button: { label: "Guardar", class: "btn btn-primary", icon: "fa fa-save" } },
       { type: "delete", button: { label: "Eliminar", class: "btn btn-danger", icon: "fa fa-trash" } },
-      { type: "default", button: { label: "...", class: "btn btn-default", icon: "fa fa-asterisk" } }
+      { type: "unknown", button: { label: "...", class: "btn btn-default", icon: "fa fa-question" } },
+      { type: "return", button: { label: "Regresar", class: "btn btn-default", icon: "fa fa-arrow-left" } }
     ];
 
     this.btnLabel = function() {
@@ -26,6 +27,9 @@
           break;
         case 'delete':
           return buttons[2].button.label;
+          break;
+        case 'return':
+          return buttons[4].button.label;
           break;
         default:
           return opts.caption;
@@ -43,6 +47,9 @@
         case 'delete':
           return buttons[2].button.class;
           break;
+        case 'return':
+          return buttons[4].button.class;
+          break;
         default:
           return buttons[3].button.class;
       }
@@ -58,6 +65,9 @@
           break;
         case 'delete':
           return buttons[2].button.icon;
+          break;
+        case 'return':
+          return buttons[4].button.icon;
           break;
         default:
           return buttons[3].button.icon;
