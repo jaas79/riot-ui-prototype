@@ -50,7 +50,7 @@ function toRef(idto){
             document.getElementById(idto).style.display = "block";
 }
 
-function gotToRef(idto,idx,containerdid){
+function goToRef(idto,idx,containerdid){
          var innerchildren = document.getElementById(containerdid).children;
          for (var i = 0; i < innerchildren.length; i++) {
                document.getElementById(containerdid).children[i].style.display="none";
@@ -70,7 +70,7 @@ function prev(containerdid){
            localStorage.setItem(fid,i)
          }
          var ids = JSON.parse(localStorage.getItem(fids))
-         gotToRef(ids[i].id,i,containerdid)
+         goToRef(ids[i].id,i,containerdid)
 }
 
 function next(containerdid){
@@ -84,7 +84,7 @@ function next(containerdid){
            i++
            localStorage.setItem(fid,i)
          }
-         gotToRef(ids[i].id,i,containerdid) 
+         goToRef(ids[i].id,i,containerdid) 
 }
 </script>
 
