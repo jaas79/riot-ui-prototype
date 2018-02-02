@@ -3,7 +3,8 @@
     <formbox title="Datos del Cliente" action="create" return="clienteAdministrar" >
   		<panel label="Datos generales">
   			<inputbox type="number" id="numeroCliente"   label="Número"    placeholder="Número de Cliente" required=true    />
-  			<inputbox type="text" id="nombreCliente"   label="Nombre"    placeholder="Nombre del Cliente" required=true   />
+  			<inputbox id="nombre" type="text" label="Nombre(s)" value="Héctor Javier" placeholder="Ingresa el nombre del Cliente" required=true disabled=false minsize=3 maxsize=100 />
+			<inputbox id="observaciones" type="textarea" lines=5 label="Observaciones" value="Estas son mis observaciones..." placeholder="Ingresa tus comentarios" required=true disabled=false minsize=3 maxsize=500 />
   		</panel>
   		<panel label="Información adicional">
   			<inputbox type="text" id="fechaNacimiento" label="Fecha de Nacimiento"   required=false />

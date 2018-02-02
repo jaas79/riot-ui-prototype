@@ -1,8 +1,8 @@
 <submit-button>
-  <button onclick={ goToRef } class={ btnType() }>
+  <span onclick={ goToRef } class={ btnType() }>
     <i class={ btnIcon() }></i>
     { btnLabel() }
-  </button>
+  </span>
 
 	<script>
 		this.goToRef = function(){
