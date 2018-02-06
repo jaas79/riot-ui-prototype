@@ -6,7 +6,7 @@
               <div id="wizard" class="form_wizard wizard_horizontal">
                     <ul class="wizard_steps" >
                     <li each={ids} >
-                      <a href="#" onclick="{toref}">
+                      <a href="#" onclick={this.tostep} >
                       <span class="step_no">{step}</span>
                       <span class="step_descr">
                         {title}<br />
@@ -28,12 +28,48 @@
           </div>
       </div>
    </div>
+   
+     
    <script>
+
+     this.tostep= function(e){
+       this.goToRef2(e.item.id)
+     }
+
+     this.goToRef2 = function(idto){
+         var innerchildren = document.getElementById(this.stepcontainerid).children;
+         for (var i = 0; i < innerchildren.length; i++) {
+               document.getElementById(this.stepcontainerid).children[i].style.display="none";
+         }
+            document.getElementById(idto).style.display = "block";
+     }
+
+     this.prev = function(){
+         var fid = this.stepcontainerid
+         var fids= this.ids
+         if (this.i>0) 
+         {
+           this.i--
+         }
+         this.goToRef2(fids[this.i].id)
+     }
+
+     this.next = function(){
+         var fid = this.stepcontainerid
+         var fids= this.ids
+         if (this.i<fids.length-1) 
+         {
+           this.i++
+         }
+         this.goToRef2(fids[this.i].id) 
+     }
+       
      this.return= "toRef('" + opts.return +"')"
      this.stepcontainerid='stepContainer_'.concat(opts.id)
-     this.prev="prev('" + this.stepcontainerid + "')"
-     this.next="next('" + this.stepcontainerid + "')"
+    
      this.on('mount', function() {
+
+       this.i=0;
        var innerchildren = document.getElementById(this.stepcontainerid).children;
        this.ids=[];
        for (var j = 0; j < innerchildren.length; j++) {
@@ -41,15 +77,13 @@
            this.ids.push({
              step:j+1,
              id: this.idd,
-             title:document.getElementById(this.stepcontainerid).children[j].attributes['title'].value,
-             toref: "goToRef(\'" +this.idd +"','"+ j +"','"+ this.stepcontainerid + "\')"
+             title:document.getElementById(this.stepcontainerid).children[j].attributes['title'].value 
            });
            if (j>0)
             document.getElementById(this.stepcontainerid).children[j].style.display = 'none'
        }
-       var fids= 'wizardIds_'+this.stepcontainerid
-       localStorage.setItem(fids,JSON.stringify(this.ids));
        this.update();
     });
+
    </script>
 </form-wizard>

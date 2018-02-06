@@ -50,42 +50,6 @@ function toRef(idto){
             document.getElementById(idto).style.display = "block";
 }
 
-function goToRef(idto,idx,containerdid){
-         var innerchildren = document.getElementById(containerdid).children;
-         for (var i = 0; i < innerchildren.length; i++) {
-               document.getElementById(containerdid).children[i].style.display="none";
-         }
-            document.getElementById(idto).style.display = "block";
-            var fid='wizardIndex_'+containerdid
-            localStorage.setItem(fid,idx);
-}
-
-function prev(containerdid){
-         var fid = 'wizardIndex_'+containerdid
-         var fids= 'wizardIds_'+containerdid
-         var i = localStorage.getItem(fid)
-         if (i>0) 
-         {
-           i--
-           localStorage.setItem(fid,i)
-         }
-         var ids = JSON.parse(localStorage.getItem(fids))
-         goToRef(ids[i].id,i,containerdid)
-}
-
-function next(containerdid){
-         var fid = 'wizardIndex_'+containerdid
-         var fids= 'wizardIds_'+containerdid
-         var i = localStorage.getItem(fid)
-         var ids = JSON.parse(localStorage.getItem(fids))
-         debugger;
-         if (i<ids.length-1) 
-         {
-           i++
-           localStorage.setItem(fid,i)
-         }
-         goToRef(ids[i].id,i,containerdid) 
-}
 </script>
 
 
