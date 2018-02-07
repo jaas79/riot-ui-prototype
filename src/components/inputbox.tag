@@ -19,13 +19,50 @@
 			}
 		}
 		
+		function checkFloatNumber(){
+			var x = document.getElementsByTagName('input')[opts.id];
+			
+			if(x.value.includes("$")){
+				var y = x.value.split("$ ")[1];
+			} else {
+				var y = x.value;
+			}
+			
+			if(! y.match(/^-?\d*(\.\d+)?$/)){
+				x.style.borderColor = "#E85445";
+				x.style.backgroundColor = "#FAEDEC";
+				console.log("Invalid value");
+			} else {
+				console.log(y);
+				y = Number(y).toFixed(opts.precision)
+				x.style.borderColor = "";
+				x.style.backgroundColor = "";
+				
+				if(opts.type == 'currency'){
+					x.value = "$ " + y;
+				} else {
+					x.value = y;
+				}
+			}
+		}
+		
 		var iBoxComponent = document.getElementsByTagName('input')[opts.id];
 		
-		if(opts.required.toLowerCase() == 'true'){
+		if(opts.required && opts.required.toLowerCase() == 'true'){
 			iBoxComponent.setAttribute("required", "");
 		}
 		
-		if(opts.type.toLowerCase() == 'textarea'){
+		if(opts.disabled && opts.disabled.toLowerCase() == 'true'){
+			iBoxComponent.setAttribute("disabled", "disabled");
+			console.log(iBoxComponent)
+		}
+		
+		if(opts.type && (opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float')){
+			iBoxComponent.addEventListener("focus", checkFloatNumber, true);
+			iBoxComponent.addEventListener("change", checkFloatNumber, true);
+		}
+		
+		if(opts.type && opts.type.toLowerCase() == 'textarea'){
 			var tAreaElement = document.createElement('textarea');
 			tAreaElement.innerHTML = iBoxComponent.innerHTML;
 			iBoxComponent.parentNode.replaceChild(tAreaElement, iBoxComponent);
@@ -43,7 +80,6 @@
 			//This is because textarea does not have a value property as such
 			//That is why it is called explicitly in order to set text in textarea
 			tAreaElement.value = opts.value;
-			console.log(tAreaElement)
 		}
 		
 		
