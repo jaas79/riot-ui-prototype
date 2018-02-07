@@ -1,12 +1,16 @@
 <searchpanel>
    <div>
       <yield/>
+      
    </div>
 </searchpanel>
 
 <searchcriteria>
    <div>
      <yield/>
+     <div if={parent.opts.add}>
+          <submit-button to={ parent.opts.add } action="create"></submit-button>
+     </div>
    </div>
 </searchcriteria>
 
@@ -15,7 +19,8 @@
        <thead>
          <tr>
            <th each={headers}> {label} </th>
-           <th>Acciones</th>
+           <th></th>
+           <th></th>
          </tr>
        </thead>
        <tbody>
@@ -27,19 +32,27 @@
                <edit-button if={opts.edit} to={ opts.edit }></edit-button>
                <delete-button if={opts.delete} to={ opts.delete }></delete-button>
            </td>
+           <td>
+              <div class="x_content">
+               <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" aria-expanded="false">Acciones <span class="caret"></span>
+               </button>
+               <ul role="menu" class="dropdown-menu" >
+                <li each={actions}>
+                 <a href="#" onclick={this.goToRef}>{label}</a>
+                </li>
+               </ul>
+              </div>
+           </td>
        </tr>
        </tbody>
     </table>
-    this.headers = JSON.parse(localStorage.getItem('header_'+ this.opts.id));
-    this.rows    = JSON.parse(localStorage.getItem('rows_'+ this.opts.id));
+    this.headers    = JSON.parse(localStorage.getItem('header_'+ this.opts.id));
+    this.rows       = JSON.parse(localStorage.getItem('rows_'+ this.opts.id));
+    this.actions    = JSON.parse(localStorage.getItem('actions_'+ this.opts.id));
     <script>
-     function goToRef(idto) {
-      var innerchildren = document.getElementById("contentid").children;
-
-      for (var i = 1; i < innerchildren.length; i++) {
-         document.getElementById("contentid").children[i].style.display="none";
-      }
-      document.getElementById(idto).style.display = "block";
-      };
+      this.goToRef = function(e){
+			  toRef(e.item.link);
+		  };
      </script>
 </searchresults>
+

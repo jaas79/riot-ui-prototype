@@ -11,6 +11,10 @@ module.exports = {
       rows: [
         { id: 'E001', data: ['E001', 'Juan Pérez', 15000] },
         { id: 'E009', data: ['E009', 'Hortencia López', 18000] }
+      ],
+      actions: [
+        { label:'Inventarios', link: 'clienteAgregar' },
+        { label:'Productos', link: 'productoCliente' }
       ]
     }
     },

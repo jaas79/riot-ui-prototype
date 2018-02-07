@@ -43,5 +43,6 @@ for (var i = 0; i < json.ids.length; i++) {
   var js = json.ids[i]
   localStorage.setItem('rows_' + js[i].id, JSON.stringify(js[i].rows))
   localStorage.setItem('header_' + js[i].id, JSON.stringify(js[i].headers))
+  localStorage.setItem('actions_' + js[i].id, JSON.stringify(js[i].actions))
 }
 riot.mount('*')

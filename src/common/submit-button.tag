@@ -10,7 +10,7 @@
 		};
 
     var buttons = [
-      { type: "create", button: { label: "Guardar", class: "btn btn-primary", icon: "fa fa-save" } },
+      { type: "create", button: { label: "Agregar", class: "btn btn-primary", icon: "fa fa-save" } },
       { type: "update", button: { label: "Guardar", class: "btn btn-primary", icon: "fa fa-save" } },
       { type: "delete", button: { label: "Eliminar", class: "btn btn-danger", icon: "fa fa-trash" } },
       { type: "unknown", button: { label: "...", class: "btn btn-default", icon: "fa fa-question" } },
