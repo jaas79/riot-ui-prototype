@@ -33,15 +33,15 @@
                <delete-button if={opts.delete} to={ opts.delete }></delete-button>
            </td>
            <td>
-              <div class="x_content">
-               <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" aria-expanded="false">Acciones <span class="caret"></span>
-               </button>
-               <ul role="menu" class="dropdown-menu" >
-                <li each={actions}>
-                 <a href="#" onclick={this.goToRef}>{label}</a>
-                </li>
-               </ul>
-              </div>
+               <div style="position:relative">
+                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" aria-expanded="false">Acciones <span class="caret"></span>
+                </button>
+                <ul role="menu" class="dropdown-menu"  >
+                  <li each={actions}>
+                   <a href="#" onclick={this.goToRef}>{label}</a>
+                  </li>
+                </ul>
+               </div>
            </td>
        </tr>
        </tbody>
