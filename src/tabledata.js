@@ -13,8 +13,8 @@ module.exports = {
         { id: 'E009', data: ['E009', 'Hortencia López', 18000] }
       ],
       actions: [
-        { label:'Inventarios', link: 'clienteAgregar' },
-        { label:'Productos', link: 'productoCliente' }
+        { label: 'Inventarios', link: 'clienteAgregar' },
+        { label: 'Productos', link: 'productoCliente' }
       ]
     }
     },
