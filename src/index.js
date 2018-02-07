@@ -36,6 +36,8 @@ import './components/form-wizard.tag'
 import './components/step-wizard.tag'
 import './components/clienteWizard.tag'
 import './components/date-picker.tag'
+import './components/row.tag'
+import './components/column.tag'
 const json = require('./tabledata.js')
 for (var i = 0; i < json.ids.length; i++) {
   var js = json.ids[i]

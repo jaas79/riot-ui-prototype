@@ -2,12 +2,18 @@
   <page caption="Agregar Cliente" id="cliente_agregar">
     <formbox title="Datos del Cliente" action="create" return="clienteAdministrar" >
   		<panel label="Datos generales">
-  			<inputbox type="number" id="numeroCliente"   label="Número"    placeholder="Número de Cliente" required=true    />
-  			<inputbox id="nombre" type="text" label="Nombre(s)" value="Héctor Javier" placeholder="Ingresa el nombre del Cliente" required=true disabled=false minsize=3 maxsize=100 />
-			<inputbox id="observaciones" type="textarea" lines=5 label="Observaciones" value="Estas son mis observaciones..." placeholder="Ingresa tus comentarios" required=true disabled=false minsize=3 maxsize=500 />
-			<inputbox id="monto-aprobado" type="currency" label="Monto del Pedido aprobado" value="100000.00" precision=2 placeholder="Ingresa el monto del Pedido aprobado" required=true disabled=false min=1.00 max=1000000.00 />
-			<inputbox id="horas-aplicadas" type="float" label="Horas aplicadas" value="6.50" precision=2 placeholder="Ingresa las horas aplicadas al proyecto" required=true disabled=false min=0.50 max=8.00 />
-			<date-picker id="fecha-nacimiento" type="date" label="Fecha de Nacimiento" value="2018-01-15" placeholder="Ingresa tu fecha de nacimiento" required=true disabled=false format="YYYY/MM/DD" min-date="2018-01-05" max-date="2018-01-20" />
+			<row>
+				<column size="col-md-6 col-xs-12">
+					<inputbox type="number" id="numeroCliente"   label="Número"    placeholder="Número de Cliente" required=true    />
+					<inputbox id="nombre" type="text" label="Nombre(s)" value="Héctor Javier" placeholder="Ingresa el nombre del Cliente" required=true disabled=false minsize=3 maxsize=100 />
+					<inputbox id="observaciones" type="textarea" lines=5 label="Observaciones" value="Estas son mis observaciones..." placeholder="Ingresa tus comentarios" required=true disabled=false minsize=3 maxsize=500 />
+				</column>
+				<column size="col-md-6 col-xs-12">
+					<inputbox id="monto-aprobado" type="currency" label="Monto del Pedido aprobado" value="100000.00" precision=2 placeholder="Ingresa el monto del Pedido aprobado" required=true disabled=false min=1.00 max=1000000.00 />
+					<inputbox id="horas-aplicadas" type="float" label="Horas aplicadas" value="6.50" precision=2 placeholder="Ingresa las horas aplicadas al proyecto" required=true disabled=false min=0.50 max=8.00 />
+					<date-picker id="fecha-nacimiento" type="date" label="Fecha de Nacimiento" value="2018-01-15" placeholder="Ingresa tu fecha de nacimiento" required=true disabled=false format="YYYY/MM/DD" min-date="2018-01-05" max-date="2018-01-20" />
+				</column>
+			</row>
   		</panel>
   		<panel label="Información adicional">
   			<inputbox type="text" id="fechaNacimiento" label="Fecha de Nacimiento"   required=false />
