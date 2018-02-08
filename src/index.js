@@ -38,6 +38,16 @@ import './components/common/step-wizard.tag'
 import './components/common/date-picker.tag'
 import './components/common/row.tag'
 import './components/common/column.tag'
+
+import './components/app/cliente/cliente-admin.tag'
+import './components/app/cliente/cliente-agregar.tag'
+
+import './components/app/pedido/pedido-admin.tag'
+import './components/app/pedido/pedido-agregar.tag'
+import './components/app/pedido/pedido-agregar-paso-1.tag'
+import './components/app/pedido/pedido-agregar-paso-2.tag'
+import './components/app/pedido/pedido-agregar-paso-3.tag'
+
 const json = require('./tabledata.js')
 for (var i = 0; i < json.ids.length; i++) {
   var js = json.ids[i]

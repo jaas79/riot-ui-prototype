@@ -15,14 +15,14 @@
                     </li>
                     </ul>
                     <label>{idX}</label>
-                    <div id={stepcontainerid} class="stepContainer" style="height:200px;"> 
+                    <div id={stepcontainerid} class="stepContainer">
                        <yield/>
                     </div>
                     <div class="ln_solid"></div>
                     <div>
                           <a href="#" class="buttonPrevious btn btn-primary" onclick={prev}> {opts.prevbutton}</a>
                           <a href="#" class="buttonNext btn btn-success"     onclick={next}> {opts.nextbutton}</a>
-                          <a href="#" class="buttonFinish btn btn-default"   onclick={return}>  {opts.donebutton}</a>  
+                          <a href="#" class="buttonFinish btn btn-default"   onclick={return}>  {opts.donebutton}</a>
                     </div>
              </div>
           </div>

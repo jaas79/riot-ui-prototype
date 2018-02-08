@@ -1,7 +1,6 @@
 <searchpanel>
    <div>
       <yield/>
-      
    </div>
 </searchpanel>
 
@@ -33,7 +32,7 @@
                <delete-button if={opts.delete} to={ opts.delete }></delete-button>
            </td>
            <td>
-              <div class="x_content">
+              <div style="position:relative">
                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" aria-expanded="false">Acciones <span class="caret"></span>
                </button>
                <ul role="menu" class="dropdown-menu" >
@@ -55,4 +54,3 @@
 		  };
      </script>
 </searchresults>
-
