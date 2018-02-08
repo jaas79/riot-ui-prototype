@@ -41,7 +41,7 @@
          for (var i = 0; i < innerchildren.length; i++) {
                document.getElementById(this.stepcontainerid).children[i].style.display="none";
          }
-            document.getElementById(idto).style.display = "block";
+            document.getElementById(this.stepcontainerid).children[idto].style.display="block";
      }
 
      this.prev = function(){
@@ -64,7 +64,12 @@
          this.goToRef2(fids[this.i].id) 
      }
        
-     this.return= "toRef('" + opts.return +"')"
+     this.return=function(){
+        this.i=0;
+        toRef(opts.return)  //"toRef('" + opts.return +"')"
+        this.goToRef2(0);
+     }
+      
      this.stepcontainerid='stepContainer_'.concat(opts.id)
     
      this.on('mount', function() {
