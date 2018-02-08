@@ -5,18 +5,18 @@
 			name="Juan Pérez González" role="Afiliado"/>
 		<sidebar-menu>
 			<menu-section title="General">
-				<side-menu icon="fa fa-home" label="Clientes">
+				<side-menu icon="fa fa-home" label="Cliente">
 					<menu-item to="clienteAdministrar" label="Mantenimiento de Clientes"/>
 					<menu-item to="clienteAgregar"     label="Alta de Cliente"          />
 					<menu-item to="clienteEliminar"    label="Eliminar Cliente"         />
 					<menu-item to="clienteEditar"      label="Editar Cliente"           />
 					<menu-item to="clienteWizard"      label="Cliente Wizard"           />
 				</side-menu>
-				<side-menu icon="fa fa-home" label="Cliente">
+				<side-menu icon="fa fa-group" label="Clientes">
 				  <menu-item to="cliente-admin"      label="Administrar Cliente"/>
 				  <menu-item to="cliente-agregar"    label="Agregar Cliente"/>
 				</side-menu>
-				<side-menu icon="fa fa-home" label="Pedido">
+				<side-menu icon="fa fa-cubes" label="Pedidos">
 				  <menu-item to="pedido-admin"      label="Administrar Pedido"/>
 				  <menu-item to="pedido-agregar"    label="Agregar Pedido"/>
 				</side-menu>
