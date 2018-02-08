@@ -9,6 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Aplicación Demo</title>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css" rel="stylesheet">
 </head>
 <body class="nav-md">
     <div class="container body">
@@ -36,6 +38,7 @@
 <script src="https://colorlib.com/polygon/vendors/autosize/dist/autosize.min.js"></script>
 <script src="https://colorlib.com/polygon/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
 <script src="https://colorlib.com/polygon/vendors/starrr/dist/starrr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
 <script src="https://colorlib.com/polygon/build/js/custom.min.js"></script>
 
 
@@ -50,6 +53,13 @@ function toRef(idto){
             document.getElementById(idto).style.display = "block";
 }
 
+function showPicker(id){
+	$(id).datepicker();
+	
+	$(id).on('changeDate', function(ev){
+		$(this).datepicker('hide');
+	});
+}
 </script>
 
 
