@@ -5,7 +5,7 @@
 		<span class="input-group-addon" onmouseover={ setDatePicker }>
 			<span class="fa fa-calendar-o"></span>
 		</span>
-		<input type="text" class="form-control" id={ opts.id }/>
+		<input type="text" placeholder={opts.placeholder} class="form-control" id={ opts.id }/>
 	</div>
 		
 	<script>
