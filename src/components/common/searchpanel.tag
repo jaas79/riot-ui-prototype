@@ -19,7 +19,7 @@
          <tr>
            <th each={headers}> {label} </th>
            <th></th>
-           <th></th>
+           <th if={actions}></th>
          </tr>
        </thead>
        <tbody>
@@ -31,7 +31,7 @@
                <edit-button if={opts.edit} to={ opts.edit }></edit-button>
                <delete-button if={opts.delete} to={ opts.delete }></delete-button>
            </td>
-           <td>
+           <td if={actions}>
               <div style="position:relative">
                <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" aria-expanded="false">Acciones <span class="caret"></span>
                </button>
@@ -45,12 +45,14 @@
        </tr>
        </tbody>
     </table>
-    this.headers    = JSON.parse(localStorage.getItem('header_'+ this.opts.id));
-    this.rows       = JSON.parse(localStorage.getItem('rows_'+ this.opts.id));
-    this.actions    = JSON.parse(localStorage.getItem('actions_'+ this.opts.id));
     <script>
+      this.headers    = JSON.parse(localStorage.getItem('header_'+ this.opts.id));
+      this.rows       = JSON.parse(localStorage.getItem('rows_'+ this.opts.id));
+      if (localStorage.getItem('actions_'+ this.opts.id) !== 'undefined'){
+          this.actions    = JSON.parse(localStorage.getItem('actions_'+ this.opts.id));
+      }
       this.goToRef = function(e){
 			  toRef(e.item.link);
 		  };
-     </script>
+    </script>
 </searchresults>
