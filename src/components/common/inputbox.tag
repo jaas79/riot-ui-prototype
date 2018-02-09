@@ -1,7 +1,8 @@
 <inputbox>
-  <div class="form-group">
+  <div class="form-group" id={opts.id}>
       <label for={opts.type}>{ opts.label }</label>
       <input type={opts.type} id={opts.id} class="form-control" name={opts.id} placeholder={opts.placeholder} value={opts.value} data-parsley-trigger="change" data-parsley-minlength={opts.minsize} data-parsley-maxlength={opts.maxsize}/>
+	  <span id={opts.id} class="help-block"></span>
       <div if={opts.required=='true'}>
          <label>Campo requerido.</label>
       </div>
@@ -20,29 +21,37 @@
 		}
 		
 		function checkFloatNumber(){
-			var x = document.getElementsByTagName('input')[opts.id];
+			var myInputText = document.getElementsByTagName('input')[opts.id];
+			var myDiv = document.getElementsByTagName('div')[opts.id];
+			var mySpan = document.getElementsByTagName('span')[opts.id];
 			
-			if(x.value.includes("$")){
-				var y = x.value.split("$ ")[1];
-			} else {
-				var y = x.value;
-			}
-			
-			if(! y.match(/^-?\d*(\.\d+)?$/)){
-				x.style.borderColor = "#E85445";
-				x.style.backgroundColor = "#FAEDEC";
-				console.log("Invalid value");
-			} else {
-				console.log(y);
-				y = Number(y).toFixed(opts.precision)
-				x.style.borderColor = "";
-				x.style.backgroundColor = "";
-				
-				if(opts.type == 'currency'){
-					x.value = "$ " + y;
+			if ( myInputText.value ){
+				if(myInputText.value.includes("$")){
+					var y = myInputText.value.split("$ ")[1];
 				} else {
-					x.value = y;
+					var y = myInputText.value;
 				}
+
+				if(! y.match(/^-?\d*(\.\d+)?$/)){
+					myDiv.setAttribute("class", "form-group has-error");
+					mySpan.textContent = "Valor incorrecto";
+					console.log(myDiv);
+					console.log(mySpan);
+				} else {
+					myDiv.setAttribute("class", "form-group");
+					mySpan.textContent = "";
+
+					y = Number(y).toFixed(opts.precision)
+
+					if(opts.type == 'currency'){
+						myInputText.value = "$ " + y;
+					} else {
+						myInputText.value = y;
+					}
+				}
+			} else {
+				myDiv.setAttribute("class", "form-group");
+				mySpan.textContent = "";
 			}
 		}
 		
