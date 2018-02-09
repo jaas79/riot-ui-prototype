@@ -35,8 +35,6 @@
 				if(! y.match(/^-?\d*(\.\d+)?$/)){
 					myDiv.setAttribute("class", "form-group has-error");
 					mySpan.textContent = "Valor incorrecto";
-					console.log(myDiv);
-					console.log(mySpan);
 				} else {
 					myDiv.setAttribute("class", "form-group");
 					mySpan.textContent = "";
