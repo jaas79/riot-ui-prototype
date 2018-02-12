@@ -1,7 +1,7 @@
 <inputbox>
 
-	<label id = { opts.id } for={opts.type}>{ opts.label }</label>
-
+	<label if={opts.required} id = { opts.id } for={opts.type}>{ opts.label}<font color="red">*</font></label>
+    <label if={!opts.required} id = { opts.id } for={opts.type}>{ opts.label}</label>
 	<div class={ iBoxDiv() } id={opts.id}>
 		<span class= { iboxClass() }>
 			<i class={ iboxIcon() }></i>
@@ -124,11 +124,6 @@
 		var iBoxComponent = document.getElementsByTagName('input')[opts.id];
 		
 		if(opts.required && opts.required.toLowerCase() == 'true'){
-			
-			var iboxLabel = document.getElementsByTagName('label')[opts.id];
-			
-			iboxLabel.innerHTML = iboxLabel.textContent + "<font color='red'>*</font>";
-			
 			iBoxComponent.addEventListener("focus", checkEmptyValue, true);
 			iBoxComponent.addEventListener("change", checkEmptyValue, true);
 		}
