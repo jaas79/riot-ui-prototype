@@ -1,5 +1,5 @@
 <pedido-agregar>
-  <page caption="Agregar Pedido" id="pedido-agregar">
+  <page title="Agregar Pedido" id="pedido-agregar">
     <panel label="Pedido">
       <form-wizard id="pedido-wizard" title="Pasos para agregar Pedido" nextbutton="Siguiente" prevbutton="Anterior" donebutton="Finalizar" return="pedido-admin">
         <step-wizard id="pedido-wizard-paso1" title="Cliente">
