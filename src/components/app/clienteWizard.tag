@@ -1,7 +1,7 @@
 <clienteWizard>
-  <page caption="Agregar Cliente" id="cliente_wizard">
-  		<panel label="Wizard">
-  		  <form-wizard id="proyeccionPension" title="Proyección de Pensión" nextbutton="Siguiente" prevbutton="Anterior" donebutton="Finalizar" return="clienteAdministrar"">
+	<page title="Cliente Wizard"  id="cliente_wizard">
+	  <panel label="Proyección de Pensión">
+  		  <form-wizard id="proyeccionPension" title="Pasos para Proyección de Pensión" nextbutton="Siguiente" prevbutton="Anterior" donebutton="Finalizar" return="clienteAdministrar"">
 		    <step-wizard id="paso1" title="Ingresar Datos">
                 <clienteAdministrar id="clienteAdministrar2"/>
             </step-wizard>
@@ -30,6 +30,6 @@
 			  </panel>
 		    </step-wizard>
 		  </form-wizard>
-  		</panel>
+		</panel>
   </page>
 </clienteWizard>
