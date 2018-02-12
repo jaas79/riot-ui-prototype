@@ -1,5 +1,5 @@
 <clienteAdministrar>
-  <page id="mantenimientoClientes" caption="Mantenimiento de Clientes" title="Mantenimiento de Clientes" description="Administración de Clientes">
+  <page id="mantenimientoClientes" title="Mantenimiento de Clientes" title="Mantenimiento de Clientes" description="Administración de Clientes">
       <searchpanel add="clienteAgregar">
          <searchcriteria>
              <search id="criterioBusqueda" type="text" caption="Buscar" placeholder="Criterio de Búsqueda"> </search>

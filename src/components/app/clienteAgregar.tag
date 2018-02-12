@@ -1,5 +1,5 @@
 <clienteAgregar>
-  <page caption="Agregar Cliente" id="cliente_agregar">
+  <page title="Agregar Cliente" id="cliente_agregar">
     <formbox title="Datos del Cliente" action="create" return="clienteAdministrar" >
   		<panel label="Datos generales">
 			<row>
