@@ -1,7 +1,7 @@
 <inputbox>
 
-	<label if={opts.required} id = { opts.id } for={opts.type}>{ opts.label}<font color="red">*</font></label>
-    <label if={!opts.required} id = { opts.id } for={opts.type}>{ opts.label}</label>
+	<label if={ opts.required }   for={opts.type}>{ opts.label}<font color="red">*</font></label>
+    <label if={ ! opts.required } for={opts.type}>{ opts.label}</label>
 	<div class={ iBoxDiv() } id={opts.id}>
 		<span class= { iboxClass() }>
 			<i class={ iboxIcon() }></i>

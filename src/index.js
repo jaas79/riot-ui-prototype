@@ -13,10 +13,14 @@ import './components/app/clienteAgregar.tag'
 import './components/app/clienteEditar.tag'
 import './components/app/clienteAdministrar.tag'
 import './components/app/clienteWizard.tag'
+
 import './components/common/layout/page.tag'
 import './components/common/layout/content.tag'
+
 import './components/common/layout/footer/footerbar.tag'
+
 import './components/common/layout/header/topbar.tag'
+
 import './components/common/layout/sidebar/menu-item.tag'
 import './components/common/layout/sidebar/menu-section.tag'
 import './components/common/layout/sidebar/side-menu.tag'
@@ -31,6 +35,7 @@ import './components/common/form/option-box.tag'
 import './components/common/form/search.tag'
 import './components/common/form/panel.tag'
 import './components/common/form/select-box.tag'
+import './components/common/form/attach-photo.tag'
 
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'

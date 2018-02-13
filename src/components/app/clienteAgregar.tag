@@ -7,6 +7,7 @@
 					<inputbox type="number" id="numeroClienteAgregar"   label="Número"    placeholder="Número de Cliente" required=true    />
 					<inputbox id="nombreAgregar" type="text" label="Nombre(s)" value="Héctor Javier" placeholder="Ingresa el nombre del Cliente" required=true disabled=false minsize=3 maxsize=100 />
 					<inputbox id="observacionesAgregar" type="textarea" lines=5 label="Observaciones" value="Estas son mis observaciones..." placeholder="Ingresa tus comentarios" required=true disabled=false minsize=3 maxsize=500 />
+					<attach-photo id="foto" label="Foto" placeholder="Seleccione una imagen..." image="../img/foto.jpg" height:200 width:100 max-size-mb="10" file-types="jpg, png, bmp" />
 				</column>
 				<column size="col-md-6 col-xs-12">
 					<inputbox id="monto-aprobado" type="currency" label="Monto del Pedido aprobado" value="100000.00" precision=2 placeholder="Ingresa el monto del Pedido aprobado" required=true disabled=false min=1.00 max=1000000.00 />
