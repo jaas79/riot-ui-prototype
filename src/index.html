@@ -56,18 +56,7 @@ function toRef(idto){
       document.getElementById("contentid").children[idto].style.display="block";
 }
 
-function showPicker(id, dateFormat, minDate, maxDate){
-	$(id).datepicker({
-		format: dateFormat,
-		startDate: minDate,
-		endDate: maxDate
-		
-	});
-	
-	$(id).on('changeDate', function(ev){
-		$(this).datepicker('hide');
-	});
-}
+
 </script>
 
 

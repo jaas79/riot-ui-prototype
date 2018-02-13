@@ -7,6 +7,6 @@
       <option-box id="fisica" label="Persona Física"/>
       <option-box id="moral" label="Persona Moral" />
     </select-box>
-    <date-picker id="entregar" type="date" label="Fecha de Entrega" value="2018-01-15" placeholder="Ingresar fecha de entrega" required=true disabled=false format="YYYY/MM/DD" mindate="2018-01-05" maxdate="2018-01-20" />
+    <date-picker id="entregar2" type="date" label="Fecha de Entrega" value="2018-01-15" placeholder="Ingresar fecha de entrega" required=true disabled=false format="YYYY/MM/DD" mindate="2018-01-05" maxdate="2018-01-20" />
   </panel>
 </pedido-agregar-paso-1>

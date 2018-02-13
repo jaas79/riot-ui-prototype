@@ -2,13 +2,13 @@
 
 	<label if={ opts.required }   for={opts.type}>{ opts.label}<font color="red">*</font></label>
     <label if={ ! opts.required } for={opts.type}>{ opts.label}</label>
-	<div class={ iBoxDiv() } id={opts.id}>
+	<div class={ iBoxDiv() } id={opts.id}0>
 		<span class= { iboxClass() }>
 			<i class={ iboxIcon() }></i>
 		</span>
-		<input type={opts.type} id={opts.id} class="form-control" name={opts.id} placeholder={opts.placeholder} value={opts.value} >
+		<input type={opts.type} name={opts.id}3 class="form-control" name={opts.id}1 placeholder={opts.placeholder} value={opts.value} >
 	</div>
-	<span id={opts.id} class="help-block"></span>
+	<span id={opts.id}2 class="help-block"></span>
 
   <script>
   
@@ -81,8 +81,8 @@
 		}
 		
 		function checkFloatNumber(){
-			var myInputText = document.getElementsByTagName('input')[opts.id];
-			var mySpan = document.getElementsByTagName('span')[opts.id];
+			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
+			var mySpan = document.getElementsByTagName('span')[opts.id+'2'];
 			
 			if ( myInputText.value ){
 				if(myInputText.value.includes("$")){
@@ -111,8 +111,8 @@
 		}
 		
 		function checkEmptyValue(){
-			var myInputText = document.getElementsByTagName('input')[opts.id];
-			var mySpan = document.getElementsByTagName('span')[opts.id];
+			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
+			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
 			
 			if ( ! myInputText.value ) {
 				mySpan.textContent = "Campo requerido";
@@ -121,7 +121,7 @@
 			}
 		}
 		
-		var iBoxComponent = document.getElementsByTagName('input')[opts.id];
+		var iBoxComponent = document.getElementsByTagName('input')[opts.id+'3'];
 		
 		if(opts.required && opts.required.toLowerCase() == 'true'){
 			iBoxComponent.addEventListener("focus", checkEmptyValue, true);
@@ -143,8 +143,8 @@
 			iBoxComponent.parentNode.replaceChild(tAreaElement, iBoxComponent);
 			
 			setAttributes(tAreaElement, {
-				"id": opts.id,
-				"name": opts.id,
+				"id": opts.id+'3',
+				"name": opts.id+'1',
 				"placeholder": opts.placeholder,
 				"required": opts.required,
 				"data-parsley-trigger": "change",
