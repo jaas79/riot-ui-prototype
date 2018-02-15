@@ -15,7 +15,6 @@
 					<inputbox id="palabra-clave" type="password" label="Password" placeholder="Ingresa tu password" required=true disabled=false min-size=3 max-size=100 />
 					<date-picker id="fecha-nacimiento" type="date" label="Fecha de Nacimiento" value="2018-02-10" placeholder="Ingresa tu fecha de nacimiento" required=true disabled=false format="YYYY/MM/DD" mindate="2018-02-02" maxdate="2018-02-15" />
 					<date-picker id="alta-seguro" type="date" label="Fecha de Alta en el Seguro" value="2018-02-15" placeholder="Ingresa la fecha de alta" required=true disabled=false format="YYYY/MM/DD" mindate="2018-02-02" maxdate="2018-02-20" />
-				</column>
 			</row>
   		</panel>
   		<panel label="Información adicional">
@@ -25,13 +24,17 @@
   			<inputbox type="text" id="comentarios"     label="Comentarios"           placehoder="Ponga aquí cualquier observación importante." required=false   />
   		</panel>
   		<panel label="Tipo de pensión">
-  			<select-box id="tipoPension" type="option" placeholder="Selecciona el Tipo de Pensión deseada">
+  			<select-box id="tipoPensionOpt" type="option" placeholder="Selecciona el Tipo de Pensión deseada">
   				<option-box id="ipp" label="Incapacidad Permanente Parcial"/>
   				<option-box id="ipt" label="Incapacidad Permanente Total" />
   			</select-box>
-  			<select-box id="tipoPension" type="check" placeholder="Selecciona el Tipo de Pensión deseada">
-  				<option-box id="ipp" label="Incapacidad Permanente Parcial"/>
-  				<option-box id="ipt" label="Incapacidad Permanente Total" />
+  			<select-box id="tipoPensionChk" type="check" placeholder="Selecciona el Tipo de Pensión deseada">
+  				<option-box id="ipa" label="Incapacidad Permanente Parcial"/>
+  				<option-box id="ipb" label="Incapacidad Permanente Total" />
+  			</select-box>
+			<select-box id="tipoPensionSlct" type="select" placeholder="Selecciona el Tipo de Pensión deseada">
+  				<option-box id="ipx" label="Incapacidad Permanente Parcial"/>
+  				<option-box id="ipy" label="Incapacidad Permanente Total" />
   			</select-box>
   		</panel>
     </formbox>

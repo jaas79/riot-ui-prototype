@@ -1,8 +1,9 @@
-<select-box id={ opts.id }>
-	<label class="">{ opts.placeholder }</label>
+<select-box>
+	<label>{ opts.placeholder }</label>
 
-	<div>
+	<div id={ opts.id }>
 		<yield/>
 	</div>
+	<br/>
 	
 </select-box>
