@@ -1,7 +1,7 @@
 <clienteWizard>
 	<page title="Cliente Wizard"  id="cliente_wizard">
 	  <panel label="Proyección de Pensión">
-  		  <form-wizard id="proyeccionPension" title="Pasos para Proyección de Pensión" nextbutton="Siguiente" prevbutton="Anterior" donebutton="Finalizar" return="clienteAdministrar"">
+  		  <form-wizard id="proyeccionPension" title="Pasos para Proyección de Pensión" nextbutton="Siguiente" prevbutton="Anterior" donebutton="Finalizar" return="/cliente-administrar/">
 		    <step-wizard id="paso1" title="Ingresar Datos">
                 <clienteAdministrar id="clienteAdministrar2"/>
             </step-wizard>

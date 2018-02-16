@@ -6,7 +6,7 @@
               <div id="wizard" class="form_wizard wizard_horizontal">
                     <ul class="wizard_steps" id="ulid{stepcontainerid}">
                     <li each={ids} id={id} >
-                      <a href="#" onclick={this.tostep} class={clas} isdone="0">
+                      <a href={opts.path} onclick={this.tostep} class={clas} isdone="0">
                       <span class="step_no">{step}</span>
                       <span class="step_descr">
                         {title}<br />
@@ -20,9 +20,9 @@
                     </div>
                     <div class="ln_solid"></div>
                     <div>
-                          <a href="#" class="buttonPrevious btn btn-primary" onclick={prev}> {opts.prevbutton}</a>
-                          <a href="#" class="buttonNext btn btn-success"     onclick={next}> {opts.nextbutton}</a>
-                          <a href="#" class="buttonFinish btn btn-default"   onclick={return}>  {opts.donebutton}</a>
+                          <a href={opts.path} class="buttonPrevious btn btn-primary" onclick={prev}> {opts.prevbutton}</a>
+                          <a href={opts.path} class="buttonNext btn btn-success"     onclick={next}> {opts.nextbutton}</a>
+                          <a href={opts.return} class="buttonFinish btn btn-default" >  {opts.donebutton}</a>
                     </div>
              </div>
           </div>

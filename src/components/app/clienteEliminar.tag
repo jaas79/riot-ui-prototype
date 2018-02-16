@@ -1,6 +1,6 @@
 <clienteEliminar>
   <page title="Borrar Cliente" id="cliente_eliminar">
-      <formbox title="Datos del Cliente" action="delete" return="clienteAdministrar">
+      <formbox title="Datos del Cliente" action="delete" return="/cliente-administrar/">
           <inputbox required=false type="text" id="numero-eliminar"   label="Número"              value="E009"                      />
           <inputbox required=false type="text" id="nombre-eliminar"   label="Nombre"              value="Hórtencia López"           />
           <inputbox required=false type="text" id="foto"            label="Foto"                value=""           type="image"   />

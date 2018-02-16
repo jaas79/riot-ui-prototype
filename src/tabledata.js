@@ -13,7 +13,7 @@ module.exports = {
         { id: 'E009', data: ['E009', 'Hortencia López', 18000] }
       ],
       actions: [
-        { label: 'Inventarios', link: 'clienteAgregar' },
+        { label: 'Inventarios', link: '/cliente-agregar/' },
         { label: 'Productos', link: 'productoCliente' }
       ]
     }
@@ -74,8 +74,8 @@ module.exports = {
         { id: 'E009', data: ['E009', 'Abarrotera San Juan, S.A. de C.V.', 2800000] }
       ],
       actions: [
-        { label: 'Pedidos', link: 'pedido-admin' },
-        { label: 'Facturas', link: 'facturas-admin' }
+        { label: 'Pedidos', link: '/pedido-admin/' },
+        { label: 'Facturas', link: '/facturas-admin/' }
       ]
     }
     },
@@ -94,7 +94,7 @@ module.exports = {
         { id: 'E009', data: ['E009', 'Abarrotera San Juan, S.A. de C.V.', '2017/12/21', '$2,800,000'] }
       ],
       actions: [
-        { label: 'Productos', link: 'producto-admin' }
+        { label: 'Productos', link: '/producto-admin/' }
       ]
     }
     }

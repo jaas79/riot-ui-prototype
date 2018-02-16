@@ -67,4 +67,17 @@ for (var i = 0; i < json.ids.length; i++) {
     localStorage.setItem('actions_' + js[i].id, JSON.stringify(js[i].actions))
   }
 }
-riot.mount('*')
+require('riot-routehandler')
+var routes = [
+  { route: '/home/', tag: 'app' },
+  { route: '/cliente-administrar/', tag: 'clienteadministrar' },
+  { route: '/cliente-editar/', tag: 'clienteeditar' },
+  { route: '/cliente-agregar/', tag: 'clienteagregar' },
+  { route: '/cliente-eliminar/', tag: 'clienteeliminar' },
+  { route: '/cliente-wizard/', tag: 'clientewizard' },
+  { route: '/clientes-admin/', tag: 'cliente-admin' },
+  { route: '/clientes-agregar/', tag: 'cliente-agregar' },
+  { route: '/pedido-admin/', tag: 'pedido-admin' },
+  { route: '/pedido-agregar/', tag: 'pedido-agregar' }
+]
+riot.mount('*', { routes: routes, options: { hashbang: true } })

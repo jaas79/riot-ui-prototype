@@ -22,7 +22,7 @@
                </button>
                <ul role="menu" class="dropdown-menu" >
                 <li each={actions}>
-                 <a href="#" onclick={this.goToRef}>{label}</a>
+                 <a href={link}>{label}</a>
                 </li>
                </ul>
               </div>
