@@ -18,6 +18,8 @@
 			</row>
   		</panel>
   		<panel label="Información adicional">
+			<outputtext id="cliente-company" label="Client Company" value="Deveint Inc." />
+			<outputtext id="project-leader" label="Project Leader" value="Tony Chicken" />
   			<inputbox type="text" id="fechaNacimiento" label="Fecha de Nacimiento"   required=false />
   			<inputbox type="text" id="creditoClienteAgregar"  label="Crédito autorizado"    placeholder="Monto máximo del Crédito autorizado" required=true disabled=true min=0 max=100000 />
   			<inputbox type="email" id="email"  label="Email" value="efuentes@softtek.com" placeholder="Ingresa tu correo (p.ej. ejemplo@mail.com)" required=true disabled=false />
