@@ -121,6 +121,19 @@
 			}
 		}
 		
+		function checkLength(){
+			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
+			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
+			
+			if ( myInputText.value.length < opts.minsize && opts.minsize  ){
+				mySpan.textContent = "El campo no puede tener menos de " + opts.minsize + " caracteres.";
+			} else if ( myInputText.value.length > opts.maxsize && opts.maxsize ) {
+				mySpan.textContent = "El campo no puede tener más de " + opts.maxsize + " caracteres.";
+			} else {
+				mySpan.textContent = "";
+			}
+		}
+		
 		var iBoxComponent = document.getElementsByTagName('input')[opts.id+'3'];
 		
 		if(opts.required && opts.required.toLowerCase() == 'true'){
@@ -135,6 +148,11 @@
 		if(opts.type && (opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float')){
 			iBoxComponent.addEventListener("focus", checkFloatNumber, true);
 			iBoxComponent.addEventListener("change", checkFloatNumber, true);
+		}
+		
+		if(opts.minsize || opts.maxsize){
+			iBoxComponent.addEventListener("focus", checkLength, true);
+			iBoxComponent.addEventListener("change", checkLength, true);
 		}
 		
 		if(opts.type && opts.type.toLowerCase() == 'textarea'){
