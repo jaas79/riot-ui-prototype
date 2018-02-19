@@ -6,7 +6,7 @@ module.exports = {
       headers: [
        { label: 'Número' },
        { label: 'Nombre completo' },
-       { label: 'Crédito autorizado', type: 'currency' }
+       { label: 'Crédito autorizado', type: 'currency', precision: '4' }
       ],
       rows: [
         { id: 'E001', data: ['E001', 'Juan Pérez', 15000] },
@@ -90,8 +90,8 @@ module.exports = {
        { label: 'Total', type: 'currency' }
       ],
       rows: [
-        { id: 'P003', data: ['P003', 'Abarrotera San Juan, S.A. de C.V.', '2018/01/15', '$354,000'] },
-        { id: 'E009', data: ['E009', 'Abarrotera San Juan, S.A. de C.V.', '2017/12/21', '$2,800,000'] }
+        { id: 'P003', data: ['P003', 'Abarrotera San Juan, S.A. de C.V.', '2018/01/15', 354000] },
+        { id: 'E009', data: ['E009', 'Abarrotera San Juan, S.A. de C.V.', '2017/12/21', 2800000] }
       ],
       actions: [
         { label: 'Productos', link: '/producto-admin/' }

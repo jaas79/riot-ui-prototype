@@ -36,6 +36,30 @@
      <script>
       this.headers    = JSON.parse(localStorage.getItem('header_'+ this.opts.id));
       this.rows       = JSON.parse(localStorage.getItem('rows_'+ this.opts.id));
+      for (var i=0; i < this.rows.length; i++)
+      {
+        for (var j=0; j < this.rows[i].data.length; j++){
+          if (this.headers[j].type!=null) {
+           if (this.headers[j].type=='currency') {
+              if (this.headers[j].precision!=null)  {
+                 this.rows[i].data[j]= '$'+ (Number(this.rows[i].data[j])).toLocaleString('en-US', { style: 'decimal', maximumFractionDigits : this.headers[j].precision, minimumFractionDigits : this.headers[j].precision })
+              }
+              else
+              {
+                 this.rows[i].data[j]= '$'+ (Number(this.rows[i].data[j])).toLocaleString('en-US', { style: 'decimal', maximumFractionDigits : 2, minimumFractionDigits : 2 })
+              }
+           }
+           else
+           {
+             this.rows[i].data[j]= this.rows[i].data[j]
+           }
+          }
+          else{
+           this.rows[i].data[j]= this.rows[i].data[j]
+          }
+        }
+      }
+     
       if (localStorage.getItem('actions_'+ this.opts.id) !== 'undefined'){
           this.actions    = JSON.parse(localStorage.getItem('actions_'+ this.opts.id));
       }
