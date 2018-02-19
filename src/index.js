@@ -59,6 +59,8 @@ import './components/app/pedido/pedido-agregar-paso-1.tag'
 import './components/app/pedido/pedido-agregar-paso-2.tag'
 import './components/app/pedido/pedido-agregar-paso-3.tag'
 
+import './components/common/form/login.tag'
+
 const json = require('./tabledata.js')
 for (var i = 0; i < json.ids.length; i++) {
   var js = json.ids[i]
@@ -70,6 +72,7 @@ for (var i = 0; i < json.ids.length; i++) {
 }
 require('riot-routehandler')
 var routes = [
+  { route: '/login/', tag: 'login' },
   { route: '/home/', tag: 'app' },
   { route: '/cliente-administrar/', tag: 'clienteadministrar' },
   { route: '/cliente-editar/', tag: 'clienteeditar' },
@@ -81,4 +84,5 @@ var routes = [
   { route: '/pedido-admin/', tag: 'pedido-admin' },
   { route: '/pedido-agregar/', tag: 'pedido-agregar' }
 ]
-riot.mount('*', { routes: routes, options: { hashbang: true } })
+riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login Form Sample', username: 'Username', password: 'Password', link: '//' } } })
+
