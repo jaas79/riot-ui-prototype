@@ -37,6 +37,7 @@ import './components/common/form/panel.tag'
 import './components/common/form/select-box.tag'
 import './components/common/form/attach-photo.tag'
 import './components/common/form/outputtext.tag'
+import './components/common/form/progress-bar.tag'
 
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'

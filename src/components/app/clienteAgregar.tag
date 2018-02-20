@@ -24,6 +24,10 @@
   			<inputbox type="text" id="creditoClienteAgregar"  label="Crédito autorizado"    placeholder="Monto máximo del Crédito autorizado" required=true disabled=true min=0 max=100000 />
   			<inputbox type="email" id="email"  label="Email" value="efuentes@softtek.com" placeholder="Ingresa tu correo (p.ej. ejemplo@mail.com)" required=true disabled=false />
   			<inputbox type="text" id="comentarios"     label="Comentarios"           placehoder="Ponga aquí cualquier observación importante." required=false   />
+			<progress-bar id="avance-calculo" value="60" minvalue="0" maxvalue="100" type="success" />
+			<progress-bar id="avance-calculo1" value="100" minvalue="0" maxvalue="100" type="info" />
+			<progress-bar id="avance-calculo2" value="40" minvalue="0" maxvalue="100" type="warning" />
+			<progress-bar id="avance-calculo3" value="50" minvalue="0" maxvalue="100" type="danger" />
   		</panel>
   		<panel label="Tipo de pensión">
   			<select-box id="tipoPensionOpt" type="option" placeholder="Selecciona el Tipo de Pensión deseada">
