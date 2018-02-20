@@ -61,6 +61,18 @@ import './components/app/pedido/pedido-agregar-paso-3.tag'
 
 import './components/common/form/login.tag'
 
+const config = require('json-loader!./config.json')
+var precision = '2' // 2 is the default value
+for (var k = 0; k < config.keys.length; k++) {
+  var ks = config.keys[k]
+  if (ks.key === 'precision') {
+    precision = ks.value
+    break
+  }
+}
+
+localStorage.setItem('precision', precision)
+
 const json = require('./tabledata.js')
 for (var i = 0; i < json.ids.length; i++) {
   var js = json.ids[i]

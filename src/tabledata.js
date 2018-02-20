@@ -6,7 +6,7 @@ module.exports = {
       headers: [
        { label: 'Número' },
        { label: 'Nombre completo' },
-       { label: 'Crédito autorizado', type: 'currency', precision: '4' }
+       { label: 'Crédito autorizado', type: 'currency', precision: '3' }
       ],
       rows: [
         { id: 'E001', data: ['E001', 'Juan Pérez', 15000] },
