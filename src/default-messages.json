@@ -1,0 +1,20 @@
+{  
+   "messages":[  
+      {  
+         "id": "minsize",
+         "message": "El campo no puede tener menos de &1 caracteres."
+      },
+      {  
+         "id": "maxsize",
+         "message": "El campo no puede tener más de &1 caracteres."
+      },
+      {  
+         "id": "min",
+         "message": "No puedes ingresar un monto inferior a &1."
+      },
+      {  
+         "id": "max",
+         "message": "No puedes ingresar un monto superior a &1."
+      }
+   ]
+}

@@ -71,6 +71,8 @@
 	}
 	
 	this.on('mount', function(){
+	
+		var msg = JSON.parse(localStorage.getItem("messages"));
 		
 		function setAttributes(elem, attribs) {
 			for(var key in attribs) {
@@ -84,28 +86,27 @@
 			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
 			var mySpan = document.getElementsByTagName('span')[opts.id+'2'];
 			
-			if ( myInputText.value ){
+			if ( myInputText.value && ( opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float' ) ){
 				if(myInputText.value.includes("$")){
-					var y = myInputText.value.split("$ ")[1];
+					var myValue = myInputText.value.split("$ ")[1];
 				} else {
-					var y = myInputText.value;
+					var myValue = myInputText.value;
 				}
 
-				if(! y.match(/^-?\d*(\.\d+)?$/)){
+				if(! myValue.match(/^-?\d*(\.\d+)?$/)){
 					mySpan.textContent = "Valor incorrecto";
 				} else {
 					mySpan.textContent = "";
 
-					y = Number(y).toFixed(opts.precision)
+					myValue = Number(myValue).toFixed(opts.precision)
 
 					if(opts.type == 'currency'){
-						myInputText.value = "$ " + y;
+						myInputText.value = "$ " + myValue;
 					} else {
-						myInputText.value = y;
+						myInputText.value = myValue;
 					}
 				}
 			} else {
-				mySpan.textContent = "";
 				checkEmptyValue();
 			}
 		}
@@ -114,7 +115,7 @@
 			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
 			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
 			
-			if ( ! myInputText.value ) {
+			if ( ! myInputText.value && opts.required.toLowerCase() == 'true' ) {
 				mySpan.textContent = "Campo requerido";
 			} else {
 				mySpan.textContent = "";
@@ -126,11 +127,32 @@
 			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
 			
 			if ( myInputText.value.length < opts.minsize && opts.minsize  ){
-				mySpan.textContent = "El campo no puede tener menos de " + opts.minsize + " caracteres.";
+				mySpan.textContent = msg.messages[0].message.replace("&1", opts.minsize);
 			} else if ( myInputText.value.length > opts.maxsize && opts.maxsize ) {
-				mySpan.textContent = "El campo no puede tener más de " + opts.maxsize + " caracteres.";
+				mySpan.textContent = msg.messages[1].message.replace("&1", opts.maxsize);
 			} else {
-				mySpan.textContent = "";
+				checkEmptyValue();
+			}
+		}
+		
+		function checkMinMaxValue(){
+			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
+			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
+			var myValue = myInputText.value;
+			
+			if(myValue.includes("$")){
+				myValue = myValue.split("$ ")[1];
+			}
+			
+			myValue = Number(myValue);
+			
+			if ( myValue < opts.min && opts.min ){
+				mySpan.textContent = msg.messages[2].message.replace("&1", opts.min);
+			} else if ( myValue > opts.max && opts.max ) {
+				mySpan.textContent = msg.messages[3].message.replace("&1", opts.max);
+			} else {
+				checkEmptyValue();
+				checkFloatNumber();
 			}
 		}
 		
@@ -141,21 +163,26 @@
 			iBoxComponent.addEventListener("change", checkEmptyValue, true);
 		}
 		
-		if(opts.disabled && opts.disabled.toLowerCase() == 'true'){
+		if ( opts.disabled && opts.disabled.toLowerCase() == 'true' ){
 			iBoxComponent.setAttribute("disabled", "disabled");
 		}
 		
-		if(opts.type && (opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float')){
+		if ( opts.type && (opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float') ){
 			iBoxComponent.addEventListener("focus", checkFloatNumber, true);
 			iBoxComponent.addEventListener("change", checkFloatNumber, true);
 		}
 		
-		if(opts.minsize || opts.maxsize){
+		if ( opts.minsize || opts.maxsize ) {
 			iBoxComponent.addEventListener("focus", checkLength, true);
 			iBoxComponent.addEventListener("change", checkLength, true);
 		}
 		
-		if(opts.type && opts.type.toLowerCase() == 'textarea'){
+		if ( opts.type && (opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float') && ( opts.max || opts.min ) ){
+			iBoxComponent.addEventListener("focus", checkMinMaxValue, true);
+			iBoxComponent.addEventListener("change", checkMinMaxValue, true);
+		}
+		
+		if ( opts.type && opts.type.toLowerCase() == 'textarea' ){
 			var tAreaElement = document.createElement('textarea');
 			tAreaElement.innerHTML = iBoxComponent.innerHTML;
 			iBoxComponent.parentNode.replaceChild(tAreaElement, iBoxComponent);
