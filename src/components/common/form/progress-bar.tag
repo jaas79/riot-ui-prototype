@@ -7,11 +7,11 @@
 
 	<script>
 		var pbarTypes = [
-			{ type: "success",     pbType: { class: "progress-bar progress-bar-success" } },
-			{ type: "info",        pbType: { class: "progress-bar progress-bar-info" } },
-			{ type: "warning",     pbType: { class: "progress-bar progress-bar-warning" } },
-			{ type: "danger",      pbType: { class: "progress-bar progress-bar-danger" } },
-			{ type: "default",     pbType: { class: "progress-bar" } }
+			{ type: "success",     pbType: { class: "progress-bar progress-bar-success progress-bar-striped active" } },
+			{ type: "info",        pbType: { class: "progress-bar progress-bar-info progress-bar-striped active" } },
+			{ type: "warning",     pbType: { class: "progress-bar progress-bar-warning progress-bar-striped active" } },
+			{ type: "danger",      pbType: { class: "progress-bar progress-bar-danger progress-bar-striped active" } },
+			{ type: "default",     pbType: { class: "progress-bar progress-bar-striped active" } }
 		]
 		
 		console.log(opts.type);
