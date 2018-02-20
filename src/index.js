@@ -7,27 +7,20 @@ if (module.hot) {
 import riot from 'riot'
 import './styles/index.scss'
 
+// Applicación
 import './components/app/app.tag'
-import './components/app/clienteEliminar.tag'
-import './components/app/clienteAgregar.tag'
-import './components/app/clienteEditar.tag'
-import './components/app/clienteAdministrar.tag'
-import './components/app/clienteWizard.tag'
 
+// Componentes comunes
 import './components/common/layout/page.tag'
 import './components/common/layout/content.tag'
-
 import './components/common/layout/footer/footerbar.tag'
-
 import './components/common/layout/header/topbar.tag'
-
 import './components/common/layout/sidebar/menu-item.tag'
 import './components/common/layout/sidebar/menu-section.tag'
 import './components/common/layout/sidebar/side-menu.tag'
 import './components/common/layout/sidebar/sidebar-menu.tag'
 import './components/common/layout/sidebar/sidebar-profile.tag'
 import './components/common/layout/sidebar/sidebar.tag'
-
 import './components/common/form/formbox.tag'
 import './components/common/form/date-picker.tag'
 import './components/common/form/inputbox.tag'
@@ -38,22 +31,26 @@ import './components/common/form/select-box.tag'
 import './components/common/form/attach-photo.tag'
 import './components/common/form/outputtext.tag'
 import './components/common/form/progress-bar.tag'
-
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'
 
+// Patrones Funcionales
 import './components/patterns/crud/searchpanel.tag'
 import './components/patterns/crud/edit-button.tag'
 import './components/patterns/crud/delete-button.tag'
 import './components/patterns/crud/submit-button.tag'
 import './components/patterns/crud/table-results.tag'
-
 import './components/patterns/wizard/form-wizard.tag'
 import './components/patterns/wizard/step-wizard.tag'
 
+// Demos
+import './components/app/clienteEliminar.tag'
+import './components/app/clienteAgregar.tag'
+import './components/app/clienteEditar.tag'
+import './components/app/clienteAdministrar.tag'
+import './components/app/clienteWizard.tag'
 import './components/app/cliente/cliente-admin.tag'
 import './components/app/cliente/cliente-agregar.tag'
-
 import './components/app/pedido/pedido-admin.tag'
 import './components/app/pedido/pedido-agregar.tag'
 import './components/app/pedido/pedido-agregar-paso-1.tag'
@@ -63,8 +60,8 @@ import './components/app/pedido/pedido-agregar-paso-3.tag'
 import './components/common/form/login.tag'
 
 const msgs = require('json-loader!./default-messages.json')
-var msgJSON = JSON.stringify(msgs);
-localStorage.setItem("messages", msgJSON);
+var msgJSON = JSON.stringify(msgs)
+localStorage.setItem('messages', msgJSON)
 
 const config = require('json-loader!./config.json')
 var precision = '2' // 2 is the default value
@@ -102,4 +99,3 @@ var routes = [
   { route: '/pedido-agregar/', tag: 'pedido-agregar' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login Form Sample', username: 'Username', password: 'Password', link: '//' } } })
-

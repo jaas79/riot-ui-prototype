@@ -4,7 +4,7 @@
 			picture="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
 			name="Juan Pérez González" role="Afiliado"/>
 		<sidebar-menu>
-			<menu-section title="General">
+			<menu-section title="Demos">
 				<side-menu icon="fa fa-home" label="Cliente">
 					<menu-item to="/cliente-administrar/" label="Mantenimiento de Clientes"/>
 					<menu-item to="/cliente-agregar/"     label="Alta de Cliente"          />
@@ -19,6 +19,11 @@
 				<side-menu icon="fa fa-cubes" label="Pedidos">
 				  <menu-item to="/pedido-admin/"      label="Administrar Pedido"/>
 				  <menu-item to="/pedido-agregar/"    label="Agregar Pedido"/>
+				</side-menu>
+			</menu-section>
+			<menu-section title="IMSS">
+				<side-menu icon="fa fa-hospital-o" label="Pensiones">
+					<menu-item to="/registrar-pension/" label="Registrar Solicitud de Pensión"/>
 				</side-menu>
 			</menu-section>
 		</sidebar-menu>
