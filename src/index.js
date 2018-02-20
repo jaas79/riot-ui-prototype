@@ -63,8 +63,8 @@ import './components/app/pedido/pedido-agregar-paso-3.tag'
 import './components/common/form/login.tag'
 
 const msgs = require('json-loader!./default-messages.json')
-var msgJSON = JSON.stringify(msgs);
-localStorage.setItem("messages", msgJSON);
+var msgJSON = JSON.stringify(msgs)
+localStorage.setItem('messages', msgJSON)
 
 const config = require('json-loader!./config.json')
 var precision = '2' // 2 is the default value
