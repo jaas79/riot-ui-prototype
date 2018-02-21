@@ -20,6 +20,9 @@
 				  <menu-item to="/pedido-admin/"      label="Administrar Pedido"/>
 				  <menu-item to="/pedido-agregar/"    label="Agregar Pedido"/>
 				</side-menu>
+				<side-menu icon="fa fa-sign-in" label="Login">
+				  <menu-item to="/login/"      label="Login Form"/>
+				</side-menu>
 			</menu-section>
 		</sidebar-menu>
 	</sidebar>

@@ -1,0 +1,35 @@
+{"ids":[
+    {
+      "id": "cliente-resultados",
+      "headers": [
+       { "label": "Número" },
+       { "label": "Nombre completo" },
+       { "label": "Crédito Disponible", "type": "currency" }
+      ],
+      "rows": [
+        { "id": "E001", "data": ["E001", "Ramiro Huerta Jimenez", 354000] },
+        { "id": "E009", "data": ["E009", "Abarrotera San Juan, S.A. de C.V.", 2800000] }
+      ],
+      "actions": [
+        { "label": "Pedidos", "link": "/pedido-admin/" },
+        { "label": "Facturas", "link": "/facturas-admin/" }
+      ]
+    },
+    {
+      "id": "pedido-resultados",
+      "headers": [
+       { "label": "Pedido" },
+       { "label": "Cliente" },
+       { "label": "Solicitado", "type": "date" },
+       { "label": "Total", "type": "currency" }
+      ],
+      "rows": [
+        { "id": "P003", "data": ["P003", "Abarrotera San Juan, S.A. de C.V.", "2018/01/15", 354000] },
+        { "id": "E009", "data": ["E009", "Abarrotera San Juan, S.A. de C.V.", "2017/12/21", 2800000] }
+      ],
+      "actions": [
+        { "label": "Productos", "link": "/producto-admin/" }
+      ]
+    }
+]
+}

@@ -1,0 +1,30 @@
+{"ids":[
+    {
+      "id": "mantenimientoClientes",
+      "headers": [
+       { "label": "Número" },
+       { "label": "Nombre completo" },
+       { "label": "Crédito autorizado", "type": "currency", "precision": 3 }
+      ],
+      "rows": [
+        { "id": "E001", "data": ["E001", "Juan Pérez", 15000] },
+        { "id": "E009", "data": ["E009", "Hortencia López", 18000] }
+      ],
+      "actions": [
+        { "label": "Inventarios", "link": "/cliente-agregar/" },
+        { "label": "Productos", "link": "productoCliente" }
+      ]
+    },
+    {
+      "id": "WWW",
+      "headers": [
+          { "label": "Número de cliente" }
+      ],
+      "rows": [
+          { "id": "E001", "data": ["E001"] },
+          { "id": "E009", "data": ["E009"] },
+          { "id": "E010", "data": ["E010"] }
+      ]
+    }
+  ]
+}
