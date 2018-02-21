@@ -88,12 +88,15 @@ for (var k = 0; k < config.keys.length; k++) {
 localStorage.setItem('precision', precision)
 
 const json = require('./tabledata.js')
-for (var i = 0; i < json.ids.length; i++) {
-  var js = json.ids[i]
-  localStorage.setItem('rows_' + js[i].id, JSON.stringify(js[i].rows))
-  localStorage.setItem('header_' + js[i].id, JSON.stringify(js[i].headers))
-  if (js[i].actions !== 'undefined') {
-    localStorage.setItem('actions_' + js[i].id, JSON.stringify(js[i].actions))
+var filenames = []
+for (var j = 0; j < json.files.length; j++) {
+  filenames[j] = (json.files[j].path)
+  for (var c = 0; c < filenames[j].ids.length; c++) {
+    localStorage.setItem('rows_' + filenames[j].ids[c].id, JSON.stringify(filenames[j].ids[c].rows))
+    localStorage.setItem('header_' + filenames[j].ids[c].id, JSON.stringify(filenames[j].ids[c].headers))
+    if (filenames[j].ids[c].actions !== 'undefined') {
+      localStorage.setItem('actions_' + filenames[j].ids[c].id, JSON.stringify(filenames[j].ids[c].actions))
+    }
   }
 }
 require('riot-routehandler')
