@@ -5,6 +5,8 @@ if (module.hot) {
 }
 
 import riot from 'riot'
+
+// Hoja de estilos
 import './styles/index.scss'
 
 // Applicación
@@ -31,6 +33,7 @@ import './components/common/form/select-box.tag'
 import './components/common/form/attach-photo.tag'
 import './components/common/form/outputtext.tag'
 import './components/common/form/progress-bar.tag'
+import './components/common/form/login.tag'
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'
 
@@ -43,7 +46,7 @@ import './components/patterns/crud/table-results.tag'
 import './components/patterns/wizard/form-wizard.tag'
 import './components/patterns/wizard/step-wizard.tag'
 
-// Demos
+// Menú: Demos
 import './components/app/clienteEliminar.tag'
 import './components/app/clienteAgregar.tag'
 import './components/app/clienteEditar.tag'
@@ -57,7 +60,16 @@ import './components/app/pedido/pedido-agregar-paso-1.tag'
 import './components/app/pedido/pedido-agregar-paso-2.tag'
 import './components/app/pedido/pedido-agregar-paso-3.tag'
 
-import './components/common/form/login.tag'
+// Menú: IMSS
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso01.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso02.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso03.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso04.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso05.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso06.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso07.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso08.tag'
 
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
@@ -96,6 +108,7 @@ var routes = [
   { route: '/clientes-admin/', tag: 'cliente-admin' },
   { route: '/clientes-agregar/', tag: 'cliente-agregar' },
   { route: '/pedido-admin/', tag: 'pedido-admin' },
-  { route: '/pedido-agregar/', tag: 'pedido-agregar' }
+  { route: '/pedido-agregar/', tag: 'pedido-agregar' },
+  { route: '/registrar-pension/', tag: 'registrar-pension' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login Form Sample', username: 'Username', password: 'Password', link: '//' } } })
