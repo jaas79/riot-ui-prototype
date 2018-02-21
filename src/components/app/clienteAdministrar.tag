@@ -4,7 +4,7 @@
          <searchcriteria>
              <search id="criterioBusqueda" type="text" caption="Buscar" placeholder="Criterio de Búsqueda"> </search>
          </searchcriteria>
-         <searchresults id="mantenimientoClientes" edit="/cliente-editar/" delete="/cliente-eliminar/">
+         <searchresults pagination="true" id="mantenimientoClientes" edit="/cliente-editar/" delete="/cliente-eliminar/">
          </searchresults>
       </searchpanel>
   </page>

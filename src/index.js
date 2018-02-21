@@ -35,6 +35,7 @@ import './components/common/form/outputtext.tag'
 import './components/common/form/progress-bar.tag'
 import './components/common/form/note.tag'
 import './components/common/form/login.tag'
+import './components/common/form/pagination-bar.tag'
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'
 

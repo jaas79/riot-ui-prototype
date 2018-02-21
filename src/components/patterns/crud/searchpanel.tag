@@ -14,5 +14,5 @@
 </searchcriteria>
 
 <searchresults>
-   <table-results id={opts.id} edit={opts.edit} delete={opts.delete}/>
+   <table-results pagination={opts.pagination} id={opts.id} edit={opts.edit} delete={opts.delete}/>
 </searchresults>
