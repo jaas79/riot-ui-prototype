@@ -30,9 +30,44 @@
        </tr>
        </tbody>
     </table>
-    
-    <div class="row"><div class="col-md-5"><div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing n to m of {rows.length} entries</div></div>
-    <div class="col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate"><ul class="pagination"><li class="paginate_button previous" id="datatable_previous"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button active"><a href="#" aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="datatable" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="datatable_next"><a href="#" aria-controls="datatable" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div>
+
+    <div class="row">
+      <div class="col-md-5">
+        <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Total de registros encontrados: {rows.length}
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
+          <ul class="pagination">
+            <li class="paginate_button previous" id="datatable_previous">
+              <a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous</a>
+            </li>
+            <li class="paginate_button ">
+              <a href="#" aria-controls="datatable" data-dt-idx="1" tabindex="0">1</a>
+            </li>
+            <li class="paginate_button ">
+              <a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0">2</a>
+            </li>
+            <li class="paginate_button active">
+              <a href="#" aria-controls="datatable" data-dt-idx="3" tabindex="0">3</a>
+            </li>
+            <li class="paginate_button ">
+              <a href="#" aria-controls="datatable" data-dt-idx="4" tabindex="0">4</a>
+            </li>
+            <li class="paginate_button ">
+              <a href="#" aria-controls="datatable" data-dt-idx="5" tabindex="0">5</a>
+            </li>
+            <li class="paginate_button ">
+              <a href="#" aria-controls="datatable" data-dt-idx="6" tabindex="0">6</a>
+            </li>
+            <li class="paginate_button next" id="datatable_next">
+              <a href="#" aria-controls="datatable" data-dt-idx="7" tabindex="0">Next</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
      <script>
       this.headers    = JSON.parse(localStorage.getItem('header_'+ this.opts.id));
       this.rows       = JSON.parse(localStorage.getItem('rows_'+ this.opts.id));
@@ -59,7 +94,7 @@
           }
         }
       }
-     
+
       if (localStorage.getItem('actions_'+ this.opts.id) !== 'undefined'){
           this.actions    = JSON.parse(localStorage.getItem('actions_'+ this.opts.id));
       }
