@@ -119,4 +119,4 @@ var routes = [
   { route: '/registrar-pension/', tag: 'registrar-pension' },
   { route: '/registrar-pension-fin/', tag: 'registrar-pension-fin' }
 ]
-riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login Form Sample', username: 'Username', password: 'Password', link: '//' } } })
+riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })
