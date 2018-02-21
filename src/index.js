@@ -5,29 +5,24 @@ if (module.hot) {
 }
 
 import riot from 'riot'
+
+// Hoja de estilos
 import './styles/index.scss'
 
+// Applicación
 import './components/app/app.tag'
-import './components/app/clienteEliminar.tag'
-import './components/app/clienteAgregar.tag'
-import './components/app/clienteEditar.tag'
-import './components/app/clienteAdministrar.tag'
-import './components/app/clienteWizard.tag'
 
+// Componentes comunes
 import './components/common/layout/page.tag'
 import './components/common/layout/content.tag'
-
 import './components/common/layout/footer/footerbar.tag'
-
 import './components/common/layout/header/topbar.tag'
-
 import './components/common/layout/sidebar/menu-item.tag'
 import './components/common/layout/sidebar/menu-section.tag'
 import './components/common/layout/sidebar/side-menu.tag'
 import './components/common/layout/sidebar/sidebar-menu.tag'
 import './components/common/layout/sidebar/sidebar-profile.tag'
 import './components/common/layout/sidebar/sidebar.tag'
-
 import './components/common/form/formbox.tag'
 import './components/common/form/date-picker.tag'
 import './components/common/form/inputbox.tag'
@@ -38,29 +33,46 @@ import './components/common/form/select-box.tag'
 import './components/common/form/attach-photo.tag'
 import './components/common/form/outputtext.tag'
 import './components/common/form/progress-bar.tag'
-
+import './components/common/form/login.tag'
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'
 
+// Patrones Funcionales
 import './components/patterns/crud/searchpanel.tag'
 import './components/patterns/crud/edit-button.tag'
 import './components/patterns/crud/delete-button.tag'
 import './components/patterns/crud/submit-button.tag'
 import './components/patterns/crud/table-results.tag'
-
 import './components/patterns/wizard/form-wizard.tag'
 import './components/patterns/wizard/step-wizard.tag'
 
+// Menú: Demos
+import './components/app/clienteEliminar.tag'
+import './components/app/clienteAgregar.tag'
+import './components/app/clienteEditar.tag'
+import './components/app/clienteAdministrar.tag'
+import './components/app/clienteWizard.tag'
 import './components/app/cliente/cliente-admin.tag'
 import './components/app/cliente/cliente-agregar.tag'
-
 import './components/app/pedido/pedido-admin.tag'
 import './components/app/pedido/pedido-agregar.tag'
 import './components/app/pedido/pedido-agregar-paso-1.tag'
 import './components/app/pedido/pedido-agregar-paso-2.tag'
 import './components/app/pedido/pedido-agregar-paso-3.tag'
 
-import './components/common/form/login.tag'
+// Menú: IMSS
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso01.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso02.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso03.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso04.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso05.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso06.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso07.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso08.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso09.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso10.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-fin.tag'
 
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
@@ -79,12 +91,15 @@ for (var k = 0; k < config.keys.length; k++) {
 localStorage.setItem('precision', precision)
 
 const json = require('./tabledata.js')
-for (var i = 0; i < json.ids.length; i++) {
-  var js = json.ids[i]
-  localStorage.setItem('rows_' + js[i].id, JSON.stringify(js[i].rows))
-  localStorage.setItem('header_' + js[i].id, JSON.stringify(js[i].headers))
-  if (js[i].actions !== 'undefined') {
-    localStorage.setItem('actions_' + js[i].id, JSON.stringify(js[i].actions))
+var filenames = []
+for (var j = 0; j < json.files.length; j++) {
+  filenames[j] = (json.files[j].path)
+  for (var c = 0; c < filenames[j].ids.length; c++) {
+    localStorage.setItem('rows_' + filenames[j].ids[c].id, JSON.stringify(filenames[j].ids[c].rows))
+    localStorage.setItem('header_' + filenames[j].ids[c].id, JSON.stringify(filenames[j].ids[c].headers))
+    if (filenames[j].ids[c].actions !== 'undefined') {
+      localStorage.setItem('actions_' + filenames[j].ids[c].id, JSON.stringify(filenames[j].ids[c].actions))
+    }
   }
 }
 require('riot-routehandler')
@@ -99,7 +114,8 @@ var routes = [
   { route: '/clientes-admin/', tag: 'cliente-admin' },
   { route: '/clientes-agregar/', tag: 'cliente-agregar' },
   { route: '/pedido-admin/', tag: 'pedido-admin' },
-  { route: '/pedido-agregar/', tag: 'pedido-agregar' }
+  { route: '/pedido-agregar/', tag: 'pedido-agregar' },
+  { route: '/registrar-pension/', tag: 'registrar-pension' },
+  { route: '/registrar-pension-fin/', tag: 'registrar-pension-fin' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login Form Sample', username: 'Username', password: 'Password', link: '//' } } })
-
