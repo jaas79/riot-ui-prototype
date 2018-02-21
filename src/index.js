@@ -70,6 +70,9 @@ import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso
 import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso06.tag'
 import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso07.tag'
 import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso08.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso09.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso10.tag'
+import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-fin.tag'
 
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
@@ -112,6 +115,7 @@ var routes = [
   { route: '/clientes-agregar/', tag: 'cliente-agregar' },
   { route: '/pedido-admin/', tag: 'pedido-admin' },
   { route: '/pedido-agregar/', tag: 'pedido-agregar' },
-  { route: '/registrar-pension/', tag: 'registrar-pension' }
+  { route: '/registrar-pension/', tag: 'registrar-pension' },
+  { route: '/registrar-pension-fin/', tag: 'registrar-pension-fin' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login Form Sample', username: 'Username', password: 'Password', link: '//' } } })

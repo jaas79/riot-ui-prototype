@@ -1,5 +1,5 @@
 {"ids":[
-    {
+  {
       "id": "montos-pension",
       "headers": [
        { "label": "Régimen" },
@@ -9,9 +9,24 @@
        { "label": "Importe a retirar de la AFORE", "type": "currency" }
       ],
       "rows": [
-        { "id": "op01", "data": ["op01", "Ley del Seguro Social 1973", "Instituto Mexicano del Seguro Social", 13414.36, 11665.09, 96639.13] },
-        { "id": "op02", "data": ["op02", "Ley del Seguro Social 1997", "Compañia Aseguradora", 20707.23, 0, 42543.13] }
+        { "id": "op01", "data": ["Ley del Seguro Social 1973", "Instituto Mexicano del Seguro Social", 13414.36, 11665.09, 96639.13] },
+        { "id": "op02", "data": ["Ley del Seguro Social 1997", "Compañia Aseguradora", 20707.23, 0, 42543.13] }
       ]
-    }
+  },
+  {
+      "id": "proyeccion-pension",
+      "headers": [
+       { "label": "Folio" },
+       { "label": "Fecha" },
+       { "label": "Documento" }
+      ],
+      "rows": [
+        { "id": "folio01", "data": ["456789014", "28/05/2015", "Documento de Proyección de Pensión"] }
+      ],
+      "actions": [
+        { "label": "Imprimir", "link": "//" },
+        { "label": "Descargar", "link": "//" }
+      ]
+  }
 ]
 }
