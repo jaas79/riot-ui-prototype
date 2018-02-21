@@ -20,23 +20,32 @@
                     </div>
                     <div class="ln_solid"></div>
                     <div>
-                          <a href={opts.path} class="buttonPrevious btn btn-primary" onclick={prev}> {opts.prevbutton}</a>
-                          <a href={opts.path} class="buttonNext btn btn-success"     onclick={next}> {opts.nextbutton}</a>
-                          <a href={opts.return} class="buttonFinish btn btn-default" >  {opts.donebutton}</a>
+                          <a href={opts.path} class="buttonPrevious btn btn-default" onclick={prev}>
+                            <i class="fa fa-chevron-left"></i>
+                            <span> {opts.prevbutton}</span>
+                          </a>
+                          <a href={opts.path} class="buttonNext btn btn-success" onclick={next}>
+                             <span> {opts.nextbutton}</span>
+                             <i class="fa fa-chevron-right"></i>
+                          </a>
+                          <a href={opts.return} class="buttonFinish btn btn-primary" >
+                             <i class="fa fa-check"></i>
+                             <span> {opts.donebutton}</span>
+                          </a>
                     </div>
              </div>
           </div>
       </div>
    </div>
-   
-     
+
+
    <script>
 
      this.tostep= function(e){
        this.goToRef2(e.item.id)
      }
 
-     
+
      this.goToRef2 = function(idto){
          var innerchildren = document.getElementById(this.stepcontainerid).children;
          for (var i = 0; i < innerchildren.length; i++) {
@@ -50,7 +59,7 @@
      this.prev = function(){
          var fid = this.stepcontainerid
          var fids= this.ids
-         if (this.i>0) 
+         if (this.i>0)
          {
            this.i--
          }
@@ -60,25 +69,25 @@
      this.next = function(){
          var fid = this.stepcontainerid
          var fids= this.ids
-         if (this.i<fids.length-1) 
+         if (this.i<fids.length-1)
          {
            this.i++
          }
-         this.goToRef2(fids[this.i].id) 
+         this.goToRef2(fids[this.i].id)
      }
-       
+
      this.return=function(){
         this.i=0;
         var innerchildren = document.getElementById(this.stepcontainerid).children;
         for (var j = 1; j < innerchildren.length; j++) {
            document.getElementById('ulid'+this.stepcontainerid).children[j].children[0].className="selected"
         }
-        toRef(opts.return) 
+        toRef(opts.return)
         this.goToRef2(0);
      }
-      
+
      this.stepcontainerid='stepContainer_'.concat(opts.id)
-    
+
      this.on('mount', function() {
        this.i=0;
        var innerchildren = document.getElementById(this.stepcontainerid).children;
@@ -95,7 +104,7 @@
             document.getElementById(this.stepcontainerid).children[j].style.display = 'none'
        }
        this.update();
-       document.getElementById('ulid'+this.stepcontainerid).children[0].children[0].className="done"  
+       document.getElementById('ulid'+this.stepcontainerid).children[0].children[0].className="done"
     });
 
    </script>

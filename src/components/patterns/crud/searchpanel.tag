@@ -8,7 +8,7 @@
    <div>
      <yield/>
      <div if={parent.opts.add}>
-          <submit-button to={ parent.opts.add } action="create"></submit-button>
+          <submit-button to={ parent.opts.add } action="add"></submit-button>
      </div>
    </div>
 </searchcriteria>
