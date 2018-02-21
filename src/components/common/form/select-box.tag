@@ -1,5 +1,6 @@
 <select-box>
-	<label>{ opts.placeholder }</label>
+	<label if={ opts.required == 'true'} >{ opts.placeholder}<font color="red">*</font></label>
+    <label if={ opts.required == 'false' || ( ! opts.required && opts.placeholder ) } >{ opts.placeholder }</label>
 
 	<div id={ opts.id }>
 		<yield/>

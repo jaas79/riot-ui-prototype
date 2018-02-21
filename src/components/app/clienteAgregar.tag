@@ -7,7 +7,8 @@
 					<inputbox type="number" id="numeroClienteAgregar"   label="Número"    placeholder="Número de Cliente" required=true    />
 					<inputbox id="nombreAgregar" type="text" label="Nombre(s)" value="Héctor Javier" placeholder="Ingresa el nombre del Cliente" required=true disabled=false minsize=3 maxsize=25/>
 					<inputbox id="observacionesAgregar" type="textarea" lines=5 label="Observaciones" value="Estas son mis observaciones..." placeholder="Ingresa tus comentarios" required=true disabled=false minsize=3 maxsize=500 />
-					<attach-photo id="foto" label="Foto" placeholder="Seleccione una imagen..." image="../img/foto.jpg" height:200 width:100 max-size-mb="10" file-types="jpg, png, bmp" />
+					<attach-photo id="foto" label="Foto" height="200" width="400" maxsizemb="7" filetypes="jpg, png, bmp" />
+					<attach-photo id="factura" label="Factura (Imagen)" height="200" width="400" maxsizemb="8" filetypes="jpg, png, bmp" />
 				</column>
 				<column size="col-md-6 col-xs-12">
 					<inputbox id="monto-aprobado" type="currency" label="Monto del Pedido aprobado" value="100000.00" precision=2 placeholder="Ingresa el monto del Pedido aprobado" required=true disabled=false min=1.00 max=1000000.00 />
@@ -21,7 +22,7 @@
 			<outputtext id="cliente-company" label="Client Company" value="Deveint Inc." />
 			<outputtext id="project-leader" label="Project Leader" value="Tony Chicken" />
   			<inputbox type="text" id="fechaNacimiento" label="Fecha de Nacimiento"   required=false />
-  			<inputbox type="text" id="creditoClienteAgregar"  label="Crédito autorizado"    placeholder="Monto máximo del Crédito autorizado" required=true disabled=true min=0 max=100000 />
+  			<inputbox type="text" id="creditoClienteAgregar"  label="Crédito autorizado"    placeholder="Monto máximo del Crédito autorizado"  disabled=true min=0 max=100000 />
   			<inputbox type="email" id="email"  label="Email" value="efuentes@softtek.com" placeholder="Ingresa tu correo (p.ej. ejemplo@mail.com)" required=true disabled=false />
   			<inputbox type="text" id="comentarios"     label="Comentarios"           placehoder="Ponga aquí cualquier observación importante." required=false   />
 			<progress-bar id="avance-calculo" value="60" minvalue="0" maxvalue="100" type="success" />
