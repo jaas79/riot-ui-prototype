@@ -32,7 +32,7 @@
 				}
 				
 				allowedExtensions = "(" + allowedExtensions.join("|").replace(/\./g, "\\.") + ")$";
-				allowedExtensions = new RegExp(allowedExtensions);
+				allowedExtensions = new RegExp(allowedExtensions, "i");
 				
 				if( ! allowedExtensions.exec(filePath) ){
 					errorMsg.textContent = 'No se pudo subir el archivo. Extensiones validas: ' + opts.filetypes + '.';
