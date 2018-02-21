@@ -8,8 +8,8 @@
     <p>Con la información anterior se determinó que podrás obtener una pensión con las siguientes caractrísticas:</p>
     <br>
     <p>Pensión por <strong>Invalidez</strong> al amparo de la Ley del Seguro Social:</p>
-    <tableresults id="montos-pension">
-    </tableresults>
+    <!-- <table-results id="montos-pension">
+    </table-results> -->
     <row>
       <column size="col-md-6 col-xs-12">
         <outputtext id="regimen" label="Régimen" value="Ley del Seguro Social 1973" />
