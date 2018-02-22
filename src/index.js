@@ -45,6 +45,7 @@ import './components/patterns/crud/edit-button.tag'
 import './components/patterns/crud/delete-button.tag'
 import './components/patterns/crud/submit-button.tag'
 import './components/patterns/crud/table-results.tag'
+import './components/patterns/crud/simple-admin.tag'
 import './components/patterns/wizard/form-wizard.tag'
 import './components/patterns/wizard/step-wizard.tag'
 

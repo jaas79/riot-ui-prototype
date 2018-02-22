@@ -7,5 +7,6 @@
          <searchresults pagination="true" id="mantenimientoClientes" edit="/cliente-editar/" delete="/cliente-eliminar/">
          </searchresults>
       </searchpanel>
+      <simple-admin id="mantenimientoClientes" maxrows="8"/>
   </page>
 </clienteAdministrar>

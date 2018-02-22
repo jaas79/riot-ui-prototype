@@ -1,31 +1,29 @@
-<table-results>
-  <table class="table table-striped">
+<simple-admin>
+ <table class="table table-striped" id={opts.id}>
        <thead>
          <tr>
+           <th each={header, index in headers}> 
+             <inputbox placeholder={header.label} id={this.opts.id+index}> </inputbox> 
+           </th>
+           <th> 
+              <a href="/cliente-administrar/" onclick={addRow} class="btn btn-primary btn-sm">
+                <i class="fa fa-plus"></i>
+              </a>
+           </th>
+         </tr>
+         <tr>
            <th each={headers}> {label} </th>
-           <th></th>
-           <th></th>
          </tr>
        </thead>
        <tbody>
-       <tr each={rows}>
-           <td each={d , i in data }>
+       <tr each={row, index in rows}> 
+           <td each={d , i in row.data }>
              {d}
            </td>
            <td>
-               <edit-button if={opts.edit} to={ opts.edit }></edit-button>
-               <delete-button if={opts.delete} to={ opts.delete }></delete-button>
-           </td>
-           <td >
-              <div style="position:relative">
-               <button  each={actions}  data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" aria-expanded="false">{group} <span class="caret"></span>
-               </button>
-               <ul each={actions}  role="menu" class="dropdown-menu" >
-                <li each={actions}>
-                 <a href={link}>{label}</a>
-                </li>
-               </ul>
-              </div>
+               <a href="/cliente-administrar/" onclick={removeRow} class="btn btn-danger btn-sm">
+                 <i class="fa fa-trash"></i>
+               </a>
            </td>
        </tr>
        </tbody>
@@ -62,8 +60,20 @@
       if (localStorage.getItem('actions_'+ this.opts.id) !== 'undefined'){
           this.actions    = JSON.parse(localStorage.getItem('actions_'+ this.opts.id));
       }
-      this.goToRef = function(e){
-			  toRef(e.item.link);
-		  };
+
+    this.removeRow = function(e){
+        this.rows.splice(e.item.index,1);
+	}
+
+    this.addRow = function(e){
+         if (this.rows.length < this.opts.maxrows) {
+         var data=[]
+         for (var r = 0; r < this.headers.length; r++){
+           data[r] = document.getElementById(this.opts.id+r).children[0].children[1].value;
+         }
+         this.rows.push({"id":"1", "data":data });
+         }
+    }
+
     </script>
-</table-results>
+</simple-admin>
