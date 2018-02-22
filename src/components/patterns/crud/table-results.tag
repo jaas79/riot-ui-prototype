@@ -4,7 +4,7 @@
          <tr>
            <th each={headers}> {label} </th>
            <th></th>
-           <th if={actions}></th>
+           <th></th>
          </tr>
        </thead>
        <tbody>
@@ -16,11 +16,11 @@
                <edit-button if={opts.edit} to={ opts.edit }></edit-button>
                <delete-button if={opts.delete} to={ opts.delete }></delete-button>
            </td>
-           <td if={actions}>
+           <td >
               <div style="position:relative">
-               <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" aria-expanded="false">Acciones <span class="caret"></span>
+               <button  each={actions}  data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" aria-expanded="false">{group} <span class="caret"></span>
                </button>
-               <ul role="menu" class="dropdown-menu" >
+               <ul each={actions}  role="menu" class="dropdown-menu" >
                 <li each={actions}>
                  <a href={link}>{label}</a>
                 </li>
@@ -61,6 +61,10 @@
 
       if (localStorage.getItem('actions_'+ this.opts.id) !== 'undefined'){
           this.actions    = JSON.parse(localStorage.getItem('actions_'+ this.opts.id));
+      }
+      if (localStorage.getItem('actions2_'+ this.opts.id) !== 'undefined'){
+          this.actions2    = JSON.parse(localStorage.getItem('actions2_'+ this.opts.id));
+          console.log(this.actions2)
       }
       this.goToRef = function(e){
 			  toRef(e.item.link);

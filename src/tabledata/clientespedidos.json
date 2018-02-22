@@ -11,8 +11,13 @@
         { "id": "E009", "data": ["E009", "Abarrotera San Juan, S.A. de C.V.", 2800000] }
       ],
       "actions": [
-        { "label": "Pedidos", "link": "/pedido-admin/" },
-        { "label": "Facturas", "link": "/facturas-admin/" }
+        {
+         "group": "Generales",
+         "actions": [
+          { "label": "Pedidos", "link": "/pedido-admin/" },
+          { "label": "Facturas", "link": "/facturas-admin/" }
+          ]
+       }
       ]
     },
     {
@@ -28,7 +33,12 @@
         { "id": "E009", "data": ["E009", "Abarrotera San Juan, S.A. de C.V.", "2017/12/21", 2800000] }
       ],
       "actions": [
-        { "label": "Productos", "link": "/producto-admin/" }
+        {
+         "group": "Generales",
+         "actions": [
+           { "label": "Productos", "link": "/producto-admin/" }
+          ]
+       }
       ]
     }
 ]

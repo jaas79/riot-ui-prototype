@@ -24,8 +24,13 @@
         { "id": "folio01", "data": ["456789014", "28/05/2015", "Documento de Proyección de Pensión"] }
       ],
       "actions": [
-        { "label": "Imprimir", "link": "//" },
-        { "label": "Descargar", "link": "//" }
+        {
+         "group": "Generales",
+         "actions": [
+          { "label": "Imprimir", "link": "//" },
+          { "label": "Descargar", "link": "//" }
+         ]
+        }
       ]
   }
 ]
