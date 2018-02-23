@@ -2,6 +2,11 @@
   <table class="table table-striped">
        <thead>
          <tr>
+           <th if={opts.action=="select-multi"}>
+             <input type="checkbox" id="check-all" class="flat" style="position: absolute; opacity: 0;">
+           </th>
+           <th if={opts.action=="select-one"}>
+           </th>
            <th each={headers}> {label} </th>
            <th></th>
            <th></th>
@@ -9,6 +14,12 @@
        </thead>
        <tbody>
        <tr each={rows}>
+           <td if={opts.action=="select-one"} class="a-center ">
+               <input type="radio" class="flat" name="iCheck" style="position: absolute; opacity: 0;">
+           </td>
+           <td if={opts.action=="select-multi"} class="a-center ">
+               <input type="checkbox" class="flat" name="table_records">
+           </td>
            <td each={d , i in data }>
              {d}
            </td>
