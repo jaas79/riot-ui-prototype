@@ -35,6 +35,13 @@
 					<menu-item to="/banorte-cargos-ligados-contratos/" label="Cargos Ligados a Contratos"/>
 				</side-menu>
 			</menu-section>
+			<menu-section title="Kukulkán">
+				<side-menu icon="fa fa-plane" label="Vuelos">
+					<menu-item to="/reservaciones/" label="Reservaciones"/>
+					<menu-item to="/banorte-cargos-ligados-contratos/" label="Consulta de Vuelo"/>
+					<menu-item to="/banorte-cargos-ligados-contratos/" label="Promociones"/>
+				</side-menu>
+			</menu-section>
 		</sidebar-menu>
 	</sidebar>
   <topbar></topbar>
