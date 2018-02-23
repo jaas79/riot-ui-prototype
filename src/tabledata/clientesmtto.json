@@ -11,8 +11,20 @@
         { "id": "E009", "data": ["E009", "Hortencia López", 18000] }
       ],
       "actions": [
-        { "label": "Inventarios", "link": "/cliente-agregar/" },
-        { "label": "Productos", "link": "productoCliente" }
+        {
+         "group": "Generales",
+         "actions": [
+          { "label": "Pedidos", "link": "/pedido-admin/" },
+          { "label": "Facturas", "link": "/facturas-admin/" }
+         ]
+        },
+        {
+         "group": "Cargos",
+         "actions": [
+          { "label": "Generar cargos", "link": "/generar-cargos/" },
+          { "label": "Agregar cargos manuales", "link": "/agregar-cargos/" }
+         ]
+        }
       ]
     },
     {

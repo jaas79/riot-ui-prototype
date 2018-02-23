@@ -18,6 +18,9 @@
           <submit-button to={ opts.return } action="delete"></submit-button>
           <submit-button to={ opts.return } action="return"></submit-button>
         </div>
+		<div if={opts.action=='search'}>
+          <submit-button to={ opts.return } action="search"></submit-button>
+        </div>
       </div>
     </form>
   </div>

@@ -44,6 +44,16 @@
   				<option-box id="ipy" label="Incapacidad Permanente Total" />
   			</select-box>
   		</panel>
+		<actions>
+			<action-group title="Cargos">
+				<action-button id="generar-cargos" label="Generar cargos" icon="fa fa-save" link="generar-cargos" />
+				<action-button id="agregar-cargos" label="Agregar cargos manuales" icon="fa fa-save" link="agregar-cargos" />
+			</action-group>
+			<action-group title="Créditos">
+				<action-button id="generar-creditos" label="Generar créditos" icon="fa fa-save" link="generar-cargos" />
+				<action-button id="agregar-creditos" label="Agregar creditos manuales" icon="fa fa-save" link="agregar-cargos" />
+			</action-group>
+		<actions>
     </formbox>
   </page>
 </clienteAgregar>
