@@ -76,6 +76,10 @@ import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso
 import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-paso10.tag'
 import './components/app/imss/pensiones/adp-f02-an-pig-01/registrar-pension-fin.tag'
 
+// Menú: Banorte
+import './components/app/banorte/arrendadora/01-cargos-ops/cargos-ops.tag'
+import './components/app/banorte/arrendadora/05-cargos-ligados-contratos/cargos-ligados-contratos.tag'
+
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
 localStorage.setItem('messages', msgJSON)
@@ -117,7 +121,9 @@ var routes = [
   { route: '/clientes-agregar/', tag: 'cliente-agregar' },
   { route: '/pedido-admin/', tag: 'pedido-admin' },
   { route: '/pedido-agregar/', tag: 'pedido-agregar' },
-  { route: '/registrar-pension/', tag: 'registrar-pension' },
-  { route: '/registrar-pension-fin/', tag: 'registrar-pension-fin' }
+  { route: '/imss-registrar-pension/', tag: 'registrar-pension' },
+  { route: '/imss-registrar-pension-fin/', tag: 'registrar-pension-fin' },
+  { route: '/banorte-cargos-ops/', tag: 'cargos-ops' },
+  { route: '/banorte-cargos-ligados-contratos/', tag: 'cargos-ligados-contratos' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })

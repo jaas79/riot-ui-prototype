@@ -3,7 +3,7 @@
     <panel label="Pensión">
       <form-wizard id="registrar-pension-flujo" title="Proyección de Pensión"
                    nextbutton="Siguiente" prevbutton="Anterior" donebutton="Finalizar"
-                   return="/registrar-pension-fin/">
+                   return="/imss-registrar-pension-fin/">
         <step-wizard id="registrar-pension-paso01" title="">
           <registrar-pension-paso01 />
         </step-wizard>

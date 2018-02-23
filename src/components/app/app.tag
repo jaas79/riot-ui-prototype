@@ -26,7 +26,13 @@
 			</menu-section>
 			<menu-section title="IMSS">
 				<side-menu icon="fa fa-hospital-o" label="Pensiones">
-					<menu-item to="/registrar-pension/" label="Registrar Solicitud de Pensión"/>
+					<menu-item to="/imss-registrar-pension/" label="Registrar Solicitud de Pensión"/>
+				</side-menu>
+			</menu-section>
+			<menu-section title="Banorte">
+				<side-menu icon="fa fa-bank" label="Arrendadora">
+					<menu-item to="/banorte-cargos-ops/" label="Cargos Ops"/>
+					<menu-item to="/banorte-cargos-ligados-contratos/" label="Cargos Ligados a Contratos"/>
 				</side-menu>
 			</menu-section>
 		</sidebar-menu>

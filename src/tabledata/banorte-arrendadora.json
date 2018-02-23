@@ -1,0 +1,32 @@
+{"ids":[
+  {
+      "id": "cargos-ops-data",
+      "headers": [
+       { "label": "Fecha" },
+       { "label": "Hora" },
+       { "label": "Lote" },
+       { "label": "Tipo" },
+       { "label": "Importe total MN", "type": "currency" },
+       { "label": "Importe total USD", "type": "currency" },
+       { "label": "Cargos exitosos MN", "type": "currency" }
+      ],
+      "rows": [
+        { "id": "01", "data": ["2018/02/01", "12:00", "Lote01", "Tipo01", "50000", "2500", "27230"] }
+      ]
+  },
+  {
+      "id": "cargos-ligados-contratos-data",
+      "headers": [
+       { "label": "No. Contrato" },
+       { "label": "Cta. Cheque/Cob" },
+       { "label": "Importe", "type": "currency" },
+       { "label": "Fecha Venc." },
+       { "label": "Moneda" },
+       { "label": "No. Renta", "type": "currency" }
+      ],
+      "rows": [
+        { "id": "01", "data": ["0976543", "C6473382-8", 126765.00, "2019/02/01", "MXP", "123"] }
+      ]
+  }
+]
+}
