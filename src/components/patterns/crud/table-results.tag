@@ -1,9 +1,9 @@
 <table-results>
-  <table class="table table-striped">
+  <table class="table table-striped bulk_action">
        <thead>
-         <tr>
+         <tr class="headings" >
            <th if={opts.action=="select-multi"}>
-             <input type="checkbox" id="check-all" class="flat" style="position: absolute; opacity: 0;">
+             <input type="checkbox" id="check-all" class="flat">
            </th>
            <th if={opts.action=="select-one"}>
            </th>
@@ -13,12 +13,13 @@
          </tr>
        </thead>
        <tbody>
-       <tr each={rows}>
+       <tr each={rows} class="even pointer">
            <td if={opts.action=="select-one"} class="a-center ">
-               <input type="radio" class="flat" name="iCheck" style="position: absolute; opacity: 0;">
+               <input type="radio" class="flat" name="table_records" style="position: absolute;">
            </td>
            <td if={opts.action=="select-multi"} class="a-center ">
                <input type="checkbox" class="flat" name="table_records">
+               
            </td>
            <td each={d , i in data }>
              {d}
