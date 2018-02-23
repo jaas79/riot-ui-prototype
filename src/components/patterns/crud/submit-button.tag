@@ -11,7 +11,8 @@
       { type: "delete", button: { label: "Eliminar", class: "btn btn-danger", icon: "fa fa-trash" } },
       { type: "unknown", button: { label: "...", class: "btn btn-default", icon: "fa fa-question" } },
       { type: "return", button: { label: "Regresar", class: "btn btn-default", icon: "fa fa-arrow-left" } },
-      { type: "add", button: { label: "Crear", class: "btn btn-primary", icon: "fa fa-plus" } }
+      { type: "add", button: { label: "Crear", class: "btn btn-primary", icon: "fa fa-plus" } },
+	  { type: "search", button: { label: "Buscar", class: "btn btn-primary", icon: "fa fa-search" } }
     ];
 
     this.btnLabel = function() {
@@ -30,6 +31,9 @@
           break;
         case 'add':
           return buttons[5].button.label;
+		  break;
+		case 'search':
+          return buttons[6].button.label;
           break;
         default:
           return opts.caption;
@@ -53,6 +57,9 @@
         case 'add':
           return buttons[5].button.class;
           break;
+		case 'search':
+          return buttons[6].button.class;
+          break;
         default:
           return buttons[3].button.class;
       }
@@ -74,6 +81,9 @@
           break;
         case 'add':
           return buttons[5].button.icon;
+          break;
+		case 'search':
+          return buttons[6].button.icon;
           break;
         default:
           return buttons[3].button.icon;
