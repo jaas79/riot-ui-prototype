@@ -1,0 +1,35 @@
+{"ids":[
+  {
+      "id": "salidas",
+      "headers": [
+       { "label": "Salida" },
+       { "label": "Llegada" },
+       { "label": "Escala" },
+       { "label": "Tarifa", "type": "currency" }
+      ],
+      "rows": [
+        { "id": "id1", "data": ["MEX 04:44 PM", "CUN 08:13 PM", "Directo", 5578] },
+        { "id": "id2", "data": ["MEX 04:57 PM", "CUN 08:23 PM", "Directo", 4378] },
+        { "id": "id3", "data": ["MEX 08:37 PM", "CUN 12:06 AM", "Directo", 4378] },
+        { "id": "id4", "data": ["MEX 01:26 PM", "CUN 07:46 PM", "1 Escala", 4228] }
+        
+      ]
+  },
+  {
+    "id": "llegadas",
+    "headers": [
+     { "label": "Salida" },
+     { "label": "Llegada" },
+     { "label": "Escala" },
+     { "label": "Tarifa", "type": "currency" }
+    ],
+    "rows": [
+      { "id": "id1", "data": ["CUN 12:52 AM", "MEX 02:38 AM", "Directo", 3128] },
+      { "id": "id2", "data": ["CUN 06:00 AM", "CUN 07:45 PM", "Directo", 3478] },
+      { "id": "id3", "data": ["CUN 07:41 PM", "CUN 09:27 PM", "Directo", 3878] },
+      { "id": "id4", "data": ["CUN 08:49 PM", "CUN 10:35 PM", "Directo", 3478] }
+      
+    ]
+}
+]
+}

@@ -1,5 +1,5 @@
 <reservaciones-01>
-<formbox title="Vuelos" action="search" return="/reservaciones-wizard/">
+<formbox title="Vuelos" action="search" return="/reservaciones-01-buscar/">
  <panel label="Buscar Vuelos">
    <row>
       <column size="col-md-4 col-xs-12">
