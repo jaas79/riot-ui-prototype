@@ -8,7 +8,8 @@
 		    <step-wizard id="paso2" title="Datos de Contacto" >
                 <reservaciones-02 id="/reservaciones-02/"/>
             </step-wizard>
-	        <step-wizard id="paso3" title="Paso 3">
+	        <step-wizard id="paso3" title="Finalizar Reserva">
+                <reservaciones-03 id="/reservaciones-03/"/>
             </step-wizard>
 		  </form-wizard>
 		</panel>

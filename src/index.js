@@ -93,6 +93,7 @@ import './components/app/kukulkan-agencia/reservaciones-wizard.tag'
 import './components/app/kukulkan-agencia/reservaciones-01.tag'
 import './components/app/kukulkan-agencia/reservaciones-01-buscar.tag'
 import './components/app/kukulkan-agencia/reservaciones-02.tag'
+import './components/app/kukulkan-agencia/reservaciones-03.tag'
 
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
