@@ -95,6 +95,7 @@ import './components/app/kukulkan-agencia/reservaciones-01-buscar.tag'
 import './components/app/kukulkan-agencia/reservaciones-01-buscar-vuelo-seleccionado.tag'
 import './components/app/kukulkan-agencia/reservaciones-02.tag'
 import './components/app/kukulkan-agencia/reservaciones-03.tag'
+import './components/app/kukulkan-agencia/reservaciones-04.tag'
 
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
@@ -144,6 +145,7 @@ var routes = [
   { route: '/reservaciones/', tag: 'reservaciones' },
   { route: '/reservaciones-wizard/', tag: 'reservaciones-wizard' },
   { route: '/reservaciones-01-buscar/', tag: 'reservaciones-01-buscar' },
-  { route: '/reservaciones-01-buscar-vuelo-seleccionado/', tag: 'reservaciones-01-buscar-vuelo-seleccionado' }
+  { route: '/reservaciones-01-buscar-vuelo-seleccionado/', tag: 'reservaciones-01-buscar-vuelo-seleccionado' },
+  { route: '/reservaciones-fin/', tag: 'reservaciones-fin' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })
