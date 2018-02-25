@@ -88,6 +88,10 @@ import './components/app/banorte/arrendadora/05-cargos-ligados-contratos/cargos-
 // Menú: Kukulkán
 import './components/app/kukulkan/vuelos/01-reservaciones/reservaciones.tag'
 
+// Menú: Kukulkán Agencia
+import './components/app/kukulkan-agencia/reservaciones-wizard.tag'
+import './components/app/kukulkan-agencia/reservaciones-01.tag'
+
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
 localStorage.setItem('messages', msgJSON)
@@ -133,6 +137,7 @@ var routes = [
   { route: '/imss-registrar-pension-fin/', tag: 'registrar-pension-fin' },
   { route: '/banorte-cargos-ops/', tag: 'cargos-ops' },
   { route: '/banorte-cargos-ligados-contratos/', tag: 'cargos-ligados-contratos' },
-  { route: '/reservaciones/', tag: 'reservaciones' }
+  { route: '/reservaciones/', tag: 'reservaciones' },
+  { route: '/reservaciones-wizard/', tag: 'reservaciones-wizard' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })

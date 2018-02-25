@@ -42,6 +42,13 @@
 					<menu-item to="/banorte-cargos-ligados-contratos/" label="Promociones"/>
 				</side-menu>
 			</menu-section>
+			<menu-section title="Kukulkán Agencia">
+				<side-menu icon="fa fa-plane" label="Vuelos">
+					<menu-item to="/reservaciones-wizard/" label="Reservaciones"/>
+					<menu-item to="/reservaciones-consulta/" label="Consulta Vuelo"/>
+					<menu-item to="/reservaciones-promociones/" label="Promociones"/>
+				</side-menu>
+			</menu-section>
 		</sidebar-menu>
 	</sidebar>
   <topbar></topbar>
