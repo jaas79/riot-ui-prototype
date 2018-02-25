@@ -12,6 +12,6 @@
 	  </panel>
    </row>
  </panel>
-  <submit-button to="/reservaciones-wizard/" action="return"> </submit-button>
+  <submit-button to="/reservaciones-01-buscar-vuelo-seleccionado/" action="return"> </submit-button>
  </page>
 </reservaciones-01-buscar>

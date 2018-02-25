@@ -92,6 +92,7 @@ import './components/app/kukulkan/vuelos/01-reservaciones/reservaciones.tag'
 import './components/app/kukulkan-agencia/reservaciones-wizard.tag'
 import './components/app/kukulkan-agencia/reservaciones-01.tag'
 import './components/app/kukulkan-agencia/reservaciones-01-buscar.tag'
+import './components/app/kukulkan-agencia/reservaciones-01-buscar-vuelo-seleccionado.tag'
 import './components/app/kukulkan-agencia/reservaciones-02.tag'
 import './components/app/kukulkan-agencia/reservaciones-03.tag'
 
@@ -142,6 +143,7 @@ var routes = [
   { route: '/banorte-cargos-ligados-contratos/', tag: 'cargos-ligados-contratos' },
   { route: '/reservaciones/', tag: 'reservaciones' },
   { route: '/reservaciones-wizard/', tag: 'reservaciones-wizard' },
-  { route: '/reservaciones-01-buscar/', tag: 'reservaciones-01-buscar' }
+  { route: '/reservaciones-01-buscar/', tag: 'reservaciones-01-buscar' },
+  { route: '/reservaciones-01-buscar-vuelo-seleccionado/', tag: 'reservaciones-01-buscar-vuelo-seleccionado' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })

@@ -30,6 +30,32 @@
       { "id": "id4", "data": ["CUN 08:49 PM", "CUN 10:35 PM", "Directo", 3478] }
       
     ]
+  },
+  {
+    "id": "ida",
+    "headers": [
+     { "label": "Salida" },
+     { "label": "Llegada" },
+     { "label": "Escala" },
+     { "label": "Tarifa", "type": "currency" }
+    ],
+    "rows": [
+      { "id": "id1", "data": ["MEX 04:44 PM", "CUN 08:13 PM", "Directo", 5578] }
+      
+    ]
+},
+{
+  "id": "regreso",
+  "headers": [
+   { "label": "Salida" },
+   { "label": "Llegada" },
+   { "label": "Escala" },
+   { "label": "Tarifa", "type": "currency" }
+  ],
+  "rows": [
+    { "id": "id1", "data": ["CUN 12:52 AM", "MEX 02:38 AM", "Directo", 3128] }
+    
+  ]
 }
 ]
 }
