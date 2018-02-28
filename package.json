@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "gentelella": "^1.4.0",
     "riot": "^3.3.0",
     "riot-routehandler": "^3.0.2"
   }

@@ -110,6 +110,21 @@
 				checkEmptyValue();
 			}
 		}
+		
+		function checkEmail(){
+			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
+			var mySpan = document.getElementsByTagName('span')[opts.id+'2'];
+			
+			if (myInputText.value){
+				if (! myInputText.value.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+					mySpan.textContent = "Ingrese un email válido";
+				} else {
+					mySpan.textContent = "";
+				}
+			} else {
+				checkEmptyValue
+			}
+		}
 
 		function checkEmptyValue(){
 			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
@@ -125,11 +140,15 @@
 		function checkLength(){
 			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
 			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
-
-			if ( myInputText.value.length < opts.minsize && opts.minsize  ){
-				mySpan.textContent = msg.messages[0].message.replace("&1", opts.minsize);
-			} else if ( myInputText.value.length > opts.maxsize && opts.maxsize ) {
-				mySpan.textContent = msg.messages[1].message.replace("&1", opts.maxsize);
+			
+			if (myInputText.value){
+				if ( myInputText.value.length < opts.minsize && opts.minsize  ){
+					mySpan.textContent = msg.messages[0].message.replace("&1", opts.minsize);
+				} else if ( myInputText.value.length > opts.maxsize && opts.maxsize ) {
+					mySpan.textContent = msg.messages[1].message.replace("&1", opts.maxsize);
+				} else {
+					mySpan.textContent = ""
+				}
 			} else {
 				checkEmptyValue();
 			}
@@ -140,19 +159,23 @@
 			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
 			var myValue = myInputText.value;
 
-			if(myValue.includes("$")){
-				myValue = myValue.split("$ ")[1];
-			}
+			if (myValue){
+				if(myValue.includes("$")){
+					myValue = myValue.split("$ ")[1];
+				}
 
-			myValue = Number(myValue);
+				myValue = Number(myValue);
 
-			if ( myValue < opts.min && opts.min ){
-				mySpan.textContent = msg.messages[2].message.replace("&1", opts.min);
-			} else if ( myValue > opts.max && opts.max ) {
-				mySpan.textContent = msg.messages[3].message.replace("&1", opts.max);
+				if ( myValue < opts.min && opts.min ){
+					mySpan.textContent = msg.messages[2].message.replace("&1", opts.min);
+				} else if ( myValue > opts.max && opts.max ) {
+					mySpan.textContent = msg.messages[3].message.replace("&1", opts.max);
+				} else {
+					mySpan.textContent = ""
+					checkFloatNumber();
+				}
 			} else {
 				checkEmptyValue();
-				checkFloatNumber();
 			}
 		}
 
@@ -170,6 +193,11 @@
 		if ( opts.type && (opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float') ){
 			iBoxComponent.addEventListener("focus", checkFloatNumber, true);
 			iBoxComponent.addEventListener("change", checkFloatNumber, true);
+		}
+		
+		if ( opts.type && opts.type.toLowerCase() == 'email' ){
+			iBoxComponent.addEventListener("focus", checkEmail, true);
+			iBoxComponent.addEventListener("change", checkEmail, true);
 		}
 
 		if ( opts.minsize || opts.maxsize ) {
