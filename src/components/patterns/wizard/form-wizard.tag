@@ -20,15 +20,17 @@
                     </div>
                     <div class="ln_solid"></div>
                     <div>
-                          <a href={opts.path} class="buttonPrevious btn btn-default" onclick={prev}>
+                          <a href={opts.path} class="buttonPrevious btn btn-default" onclick={prev} id="buttonPrevious">
                             <i class="fa fa-chevron-left"></i>
                             <span> {opts.prevbutton}</span>
                           </a>
-                          <a href={opts.path} class="buttonNext btn btn-success" onclick={next}>
+                          
+                          <a href={opts.path} class="buttonNext btn btn-success" onclick={next} id="buttonNext">
                              <span> {opts.nextbutton}</span>
                              <i class="fa fa-chevron-right"></i>
                           </a>
-                          <a href={opts.return} class="buttonFinish btn btn-primary" >
+                          
+                          <a href={opts.return} class="buttonFinish btn btn-primary" id="buttonFinish">
                              <i class="fa fa-check"></i>
                              <span> {opts.donebutton}</span>
                           </a>
@@ -63,6 +65,11 @@
          {
            this.i--
          }
+         document.getElementById('buttonFinish').className="disabled";
+         document.getElementById('buttonNext').className="buttonNext btn btn-success"
+         if (this.i==0){
+           document.getElementById('buttonPrevious').className="disabled"
+         }
          this.goToRef2(fids[this.i].id)
      }
 
@@ -72,6 +79,12 @@
          if (this.i<fids.length-1)
          {
            this.i++
+         }
+         document.getElementById('buttonFinish').className="disabled";
+         document.getElementById('buttonPrevious').className="buttonPrevious btn btn-default"
+         if (this.i>=fids.length-1){
+           document.getElementById('buttonNext').className="disabled"
+           document.getElementById('buttonFinish').className="buttonFinish btn btn-primary"
          }
          this.goToRef2(fids[this.i].id)
      }
@@ -89,6 +102,8 @@
      this.stepcontainerid='stepContainer_'.concat(opts.id)
 
      this.on('mount', function() {
+       document.getElementById('buttonPrevious').className="disabled";
+       document.getElementById('buttonFinish').className="disabled";
        this.i=0;
        var innerchildren = document.getElementById(this.stepcontainerid).children;
        this.ids=[];
