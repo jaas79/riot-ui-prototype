@@ -30,7 +30,7 @@
                              <i class="fa fa-chevron-right"></i>
                           </a>
                           
-                          <a href={opts.return} class="buttonFinish btn btn-primary" id="buttonFinish">
+                          <a href={opts.return} class="buttonFinish btn btn-primary" id="buttonFinish" onclick={return}>
                              <i class="fa fa-check"></i>
                              <span> {opts.donebutton}</span>
                           </a>
@@ -91,12 +91,14 @@
 
      this.return=function(){
         this.i=0;
-        var innerchildren = document.getElementById(this.stepcontainerid).children;
-        for (var j = 1; j < innerchildren.length; j++) {
-           document.getElementById('ulid'+this.stepcontainerid).children[j].children[0].className="selected"
+        if (document.getElementById('buttonFinish').className=="disabled")
+        {
+         document.getElementById('buttonFinish').href=document.location.href.split("#!")[1]
         }
-        toRef(opts.return)
-        this.goToRef2(0);
+        else
+        {
+          document.getElementById('buttonFinish').href=opts.return
+        }
      }
 
      this.stepcontainerid='stepContainer_'.concat(opts.id)
