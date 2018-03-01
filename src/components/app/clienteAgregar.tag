@@ -1,6 +1,6 @@
 <clienteAgregar>
   <page title="Agregar Cliente" id="cliente_agregar">
-    <formbox title="Datos del Cliente" action="create" return="/cliente-administrar/" >
+    <formbox title="Datos del Cliente" action="custom" icon="fa fa-check-circle-o" button="Generar" return="/cliente-administrar/" >
   		<panel label="Datos generales">
 			<row>
 				<column size="col-md-6 col-xs-12">
