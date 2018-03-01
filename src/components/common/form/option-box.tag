@@ -26,7 +26,10 @@
 					
 					plcholder.text = "Seleccione una opción...";
 					plcholder.disabled = "disabled";
-					plcholder.selected = "selected";
+					
+					if ( opts.selected == 'false' || ! opts.selected ){
+						plcholder.selected = "selected";
+					}
 					
 					s.id = this.parent.opts.id;
 					s.setAttribute("class", "form-control");
@@ -40,8 +43,12 @@
 			
 			var opt = document.getElementById("opt-" + opts.id);
 			
-			if ( ( this.parent.opts.type == 'option' || this.parent.opts.type == 'check' ) && opts.checked == 'true' ){
-				opt.setAttribute("checked", "checked");
+			if ( opts.selected == 'true' ) {
+				if ( this.parent.opts.type == 'option' || this.parent.opts.type == 'check' ){
+					opt.checked = "checked";
+				} else {
+					opt.selected = "selected";
+				}
 			}
 		});
 	</script>

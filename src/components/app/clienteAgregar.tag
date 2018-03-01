@@ -32,16 +32,16 @@
   		</panel>
   		<panel label="Tipo de pensión">
   			<select-box id="tipoPensionOpt" type="option" placeholder="Selecciona el Tipo de Pensión deseada">
-  				<option-box id="ipp" label="Incapacidad Permanente Parcial" checked=true />
+  				<option-box id="ipp" label="Incapacidad Permanente Parcial" selected=true />
   				<option-box id="ipt" label="Incapacidad Permanente Total" />
   			</select-box>
   			<select-box id="tipoPensionChk" type="check" placeholder="Selecciona el Tipo de Pensión deseada">
-  				<option-box id="ipa" label="Incapacidad Permanente Parcial" checked=true />
+  				<option-box id="ipa" label="Incapacidad Permanente Parcial" selected=true />
   				<option-box id="ipb" label="Incapacidad Permanente Total" />
   			</select-box>
 			<select-box id="tipoPensionSlct" type="select" placeholder="Selecciona el Tipo de Pensión deseada">
-  				<option-box id="ipx" label="Incapacidad Permanente Parcial"/>
-  				<option-box id="ipy" label="Incapacidad Permanente Total" />
+  				<option-box id="ipx" label="Incapacidad Permanente Parcial" />
+  				<option-box id="ipy" label="Incapacidad Permanente Total" selected=true/>
   			</select-box>
   		</panel>
 		<actions>
