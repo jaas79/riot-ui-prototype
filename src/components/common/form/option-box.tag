@@ -1,17 +1,17 @@
 <option-box>
 	<div class="radio" if={ this.parent.opts.type == 'option' }>
 		<label>
-			<input id={ opts.id } type="radio" class="flat" name="iCheck"> { opts.label }
+			<input id={ "opt-" + opts.id } type="radio" class="flat" name="iCheck"> { opts.label }
 		</label>
 	</div>
 	
 	<div class="checkbox" if={ this.parent.opts.type == 'check' }>
 		<label>
-			<input id={ opts.id } type="checkbox" class="flat"> { opts.label }
+			<input id={ "opt-" + opts.id } type="checkbox" class="flat"> { opts.label }
 		</label>
 	</div>
 	
-	<option id={opts.id} if={ this.parent.opts.type == 'select' }>{ opts.label }</option>
+	<option id={ "opt-" + opts.id } if={ this.parent.opts.type == 'select' }>{ opts.label }</option>
 	
 	<script>
 		this.on('mount', function(){
@@ -33,11 +33,15 @@
 					s.add(plcholder);
 					d.appendChild(s)
 				}
-				console.log(s);
-				var o = document.getElementsByTagName('option')[opts.id];
+				var o = document.getElementById("opt-" + opts.id);
 					
 				s.add(o);
-				
+			}
+			
+			var opt = document.getElementById("opt-" + opts.id);
+			
+			if ( ( this.parent.opts.type == 'option' || this.parent.opts.type == 'check' ) && opts.checked == 'true' ){
+				opt.setAttribute("checked", "checked");
 			}
 		});
 	</script>
