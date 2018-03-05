@@ -182,10 +182,9 @@
 		function checkNumberOfLines(){
 			var tAreaElement = document.getElementsByTagName('textarea')[opts.id+'3'];
 			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
-			var text = tAreaElement.value.replace(/\s+$/g,"");
-			var tLines = text.split("\n").length;
+			var nLines = tAreaElement.value.split(/\r*\n/).length;
 			
-			if ( tLines > Number(opts.lines) ){
+			if ( nLines > Number(opts.lines) ){
 				mySpan.textContent = "El campo no puede tener más de " + opts.lines + " líneas";
 			} else {
 				mySpan.textContent = ""
