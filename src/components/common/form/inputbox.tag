@@ -179,9 +179,17 @@
 			}
 		}
 		
-		function countLines(){
+		function checkNumberOfLines(){
 			var tAreaElement = document.getElementsByTagName('textarea')[opts.id+'3'];
+			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
 			var text = tAreaElement.value.replace(/\s+$/g,"");
+			var tLines = text.split("\n").length;
+			
+			if ( tLines > Number(opts.lines) ){
+				mySpan.textContent = "El campo no puede tener más de " + opts.lines + " líneas";
+			} else {
+				mySpan.textContent = ""
+			}
 		}
 
 		var iBoxComponent = document.getElementsByTagName('input')[opts.id+'3'];
@@ -238,8 +246,9 @@
 		if( document.getElementsByTagName('textarea')[opts.id+'3'] ){
 			var tArea = document.getElementsByTagName('textarea')[opts.id+'3'];
 			
-			if( opts.lines ){
-				
+			if( opts.lines && Number(opts.lines) > 0 ){
+				tArea.addEventListener("focus", checkNumberOfLines, true);
+				tArea.addEventListener("change", checkNumberOfLines, true);
 			}
 			
 		}
