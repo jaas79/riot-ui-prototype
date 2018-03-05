@@ -98,12 +98,12 @@
       }
 
     this.removeRow = function(e){
-          this.rowstarget=this.rowstargettemp;
-	}
+          this.update();
+	  }
 
     this.addRow = function(e){
          var l = this.rowstarget.length;
-         for (var r = 0; r < this.rows.length+1; r++){
+         for (var r = 0; r <= this.rows.length; r++){
            if (document.getElementById("table_source").rows[r].className == "selected") {
             var data=[]
             for (var s= 0; s < document.getElementById("table_source").rows[r].children.length; s++) {
@@ -111,21 +111,19 @@
             }
             data.splice(0,1);
             this.rowstarget.push({"id":r-1+l, "data":data });
-            this.rowstargettemp.push({"id":r-1+l, "data":data });
           }
          }
-
     }
 
     this.select = function(e){
          this.deleted=this.deleted +1;
          if (document.getElementById(e.item.index).className=="icheckbox_flat-green") {
           document.getElementById(e.item.index).className="icheckbox_flat-green checked"
-          this.rowstargettemp[e.item.row.id].id = -1;
+          this.rowstarget[e.item.row.id].id = -1;
+          e.preventUpdate = true
          } else {
           document.getElementById(e.item.index).className="icheckbox_flat-green"
           }
-
     }
 
     </script>
