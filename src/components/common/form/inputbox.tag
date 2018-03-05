@@ -82,29 +82,39 @@
 			}
 		}
 
-		function checkFloatNumber(){
+		function checkTypeNumber(){
 			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
 			var mySpan = document.getElementsByTagName('span')[opts.id+'2'];
 
-			if ( myInputText.value && ( opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float' ) ){
+			if ( myInputText.value ) {
+				
 				if(myInputText.value.includes("$")){
 					var myValue = myInputText.value.split("$ ")[1];
 				} else {
 					var myValue = myInputText.value;
 				}
+				
+				if ( opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float' ){
 
-				if(! myValue.match(/^-?\d*(\.\d+)?$/)){
-					mySpan.textContent = "Valor incorrecto";
-				} else {
-					mySpan.textContent = "";
-
-					myValue = Number(myValue).toFixed(opts.precision)
-
-					if(opts.type == 'currency'){
-						myInputText.value = "$ " + myValue;
+					if(! myValue.match(/^-?\d*(\.\d+)?$/)){
+						mySpan.textContent = "Valor incorrecto";
 					} else {
-						myInputText.value = myValue;
+						mySpan.textContent = "";
+
+						myValue = Number(myValue).toFixed(opts.precision)
 					}
+				} else {
+					if(! myValue.match(/^-?\d+$/)){
+						mySpan.textContent = "Valor incorrecto";
+					} else {
+						mySpan.textContent = "";
+					}
+				}
+				
+				if(opts.type == 'currency'){
+					myInputText.value = "$ " + myValue;
+				} else {
+					myInputText.value = myValue;
 				}
 			} else {
 				checkEmptyValue();
@@ -122,7 +132,7 @@
 					mySpan.textContent = "";
 				}
 			} else {
-				checkEmptyValue
+				checkEmptyValue();
 			}
 		}
 
@@ -172,7 +182,7 @@
 					mySpan.textContent = msg.messages[3].message.replace("&1", opts.max);
 				} else {
 					mySpan.textContent = ""
-					checkFloatNumber();
+					checkTypeNumber();
 				}
 			} else {
 				checkEmptyValue();
@@ -202,9 +212,9 @@
 			iBoxComponent.setAttribute("disabled", "disabled");
 		}
 
-		if ( opts.type && (opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float') ){
-			iBoxComponent.addEventListener("focus", checkFloatNumber, true);
-			iBoxComponent.addEventListener("change", checkFloatNumber, true);
+		if ( opts.type && (opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float' || opts.type.toLowerCase() == 'integer') ){
+			iBoxComponent.addEventListener("focus", checkTypeNumber, true);
+			iBoxComponent.addEventListener("change", checkTypeNumber, true);
 		}
 		
 		if ( opts.type && opts.type.toLowerCase() == 'email' ){
@@ -217,7 +227,7 @@
 			iBoxComponent.addEventListener("change", checkLength, true);
 		}
 
-		if ( opts.type && (opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float') && ( opts.max || opts.min ) ){
+		if ( opts.type && (opts.type.toLowerCase() == 'currency' || opts.type.toLowerCase() == 'float' || opts.type.toLowerCase() == 'integer') && ( opts.max || opts.min ) ){
 			iBoxComponent.addEventListener("focus", checkMinMaxValue, true);
 			iBoxComponent.addEventListener("change", checkMinMaxValue, true);
 		}
