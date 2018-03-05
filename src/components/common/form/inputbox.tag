@@ -16,6 +16,7 @@
 		{ type: "email",    inputbox: { icon: "fa fa-envelope-o", class: "input-group-addon", div: "input-group" } },
 		{ type: "currency", inputbox: { icon: "fa fa-usd",        class: "input-group-addon", div: "input-group" } },
 		{ type: "password", inputbox: { icon: "fa fa-lock",       class: "input-group-addon", div: "input-group" } },
+		{ type: "phone",    inputbox: { icon: "fa fa-phone",      class: "input-group-addon", div: "input-group" } },
 		{ type: "default",  inputbox: { icon: "",                 class: "",                  div: "form-group"  } }
 	]
 
@@ -30,8 +31,11 @@
 			case 'password':
 				return inputboxes[2].inputbox.icon;
 				break;
-			default:
+			case 'phone':
 				return inputboxes[3].inputbox.icon;
+				break;
+			default:
+				return inputboxes[4].inputbox.icon;
 				break;
 		}
 	}
@@ -47,8 +51,11 @@
 			case 'password':
 				return inputboxes[2].inputbox.class;
 				break;
-			default:
+			case 'phone':
 				return inputboxes[3].inputbox.class;
+				break;
+			default:
+				return inputboxes[4].inputbox.class;
 				break;
 		}
 	}
@@ -64,8 +71,11 @@
 			case 'password':
 				return inputboxes[2].inputbox.div;
 				break;
-			default:
+			case 'phone':
 				return inputboxes[3].inputbox.div;
+				break;
+			default:
+				return inputboxes[4].inputbox.div;
 				break;
 		}
 	}
@@ -220,6 +230,10 @@
 		if ( opts.type && opts.type.toLowerCase() == 'email' ){
 			iBoxComponent.addEventListener("focus", checkEmail, true);
 			iBoxComponent.addEventListener("change", checkEmail, true);
+		}
+		
+		if ( opts.type && opts.type.toLowerCase() == 'phone' ){
+			iBoxComponent.setAttribute("data-inputmask", "'mask' : '(99) 9999-9999'");
 		}
 
 		if ( opts.minsize || opts.maxsize ) {
