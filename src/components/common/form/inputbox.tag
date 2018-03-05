@@ -178,6 +178,11 @@
 				checkEmptyValue();
 			}
 		}
+		
+		function countLines(){
+			var tAreaElement = document.getElementsByTagName('textarea')[opts.id+'3'];
+			var text = tAreaElement.value.replace(/\s+$/g,"");
+		}
 
 		var iBoxComponent = document.getElementsByTagName('input')[opts.id+'3'];
 
@@ -228,6 +233,15 @@
 			//This is because textarea does not have a value property as such
 			//That is why it is called explicitly in order to set text in textarea
 			tAreaElement.value = opts.value;
+		}
+		
+		if( document.getElementsByTagName('textarea')[opts.id+'3'] ){
+			var tArea = document.getElementsByTagName('textarea')[opts.id+'3'];
+			
+			if( opts.lines ){
+				
+			}
+			
 		}
 	})
   </script>

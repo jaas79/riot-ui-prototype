@@ -15,6 +15,7 @@ import './components/app/app.tag'
 // Componentes comunes
 import './components/common/layout/page.tag'
 import './components/common/layout/content.tag'
+import './components/common/layout/tablist.tag'
 import './components/common/layout/footer/footerbar.tag'
 import './components/common/layout/header/topbar.tag'
 import './components/common/layout/sidebar/menu-item.tag'
