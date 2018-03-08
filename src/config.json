@@ -1,5 +1,9 @@
 {"keys": [
       {"key": "precision", "value": "2"},
+	  {"key": "minsize", "value": "El campo no puede tener menos de &1 caracteres."},
+	  {"key": "maxsize", "value": "El campo no puede tener más de &1 caracteres."},
+	  {"key": "min", "value": "No puedes ingresar un monto inferior a &1."},
+	  {"key": "max", "value": "No puedes ingresar un monto superior a &1."},
       {"key": "otro", "value": ""}
     ]
 }

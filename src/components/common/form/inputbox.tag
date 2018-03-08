@@ -111,7 +111,12 @@
 					} else {
 						mySpan.textContent = "";
 
-						myValue = Number(myValue).toFixed(opts.precision)
+						if( opts.precision && Number(opts.precision) > 0 ){
+							myValue = Number(myValue).toFixed(opts.precision);
+						} else {
+							var precision = Number(localStorage.getItem('precision'));
+							myValue = Number(myValue).toFixed(precision);
+						}
 					}
 				} else {
 					if(! myValue.match(/^-?\d+$/)){

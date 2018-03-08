@@ -12,7 +12,7 @@
 					<attach-photo id="factura" label="Factura (Imagen)" height="200" width="400" maxsizemb="8" filetypes="jpg, png, bmp" />
 				</column>
 				<column size="col-md-6 col-xs-12">
-					<inputbox id="monto-aprobado" type="currency" label="Monto del Pedido aprobado" value="100000.00" precision=2 placeholder="Ingresa el monto del Pedido aprobado" required=true disabled=false min=1.00 max=1000000.00 />
+					<inputbox id="monto-aprobado" type="currency" label="Monto del Pedido aprobado" value="100000.00"  placeholder="Ingresa el monto del Pedido aprobado" required=true disabled=false min=1.00 max=1000000.00 />
 					<inputbox id="horas-aplicadas" type="float" label="Horas aplicadas" value="6.50" precision=2 placeholder="Ingresa las horas aplicadas al proyecto" required=true disabled=false min=0.50 max=8.00 />
 					<inputbox id="cantidad" type="integer" label="Cantidad" value="100" placeholder="Ingresa la cantidad solicitada" required=true disabled=false min=1 max=100 />
 					<inputbox id="palabra-clave" type="password" label="Password" placeholder="Ingresa tu password" required=true disabled=false minsize=6 maxsize=8 />
