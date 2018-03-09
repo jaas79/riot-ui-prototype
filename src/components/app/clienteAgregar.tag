@@ -10,6 +10,7 @@
 					<inputbox id="observacionesAgregar" type="textarea" lines=5 label="Observaciones" value="Estas son mis observaciones..." placeholder="Ingresa tus comentarios" required=true disabled=false minsize=3 maxsize=500 />
 					<attach-photo id="foto" label="Foto" height="200" width="400" maxsizemb="7" filetypes="jpg, png, bmp" />
 					<attach-photo id="factura" label="Factura (Imagen)" height="200" width="400" maxsizemb="8" filetypes="jpg, png, bmp" />
+
 				</column>
 				<column size="col-md-6 col-xs-12">
 					<inputbox id="monto-aprobado" type="currency" label="Monto del Pedido aprobado" value="100000.00"  placeholder="Ingresa el monto del Pedido aprobado" required=true disabled=false min=1.00 max=1000000.00 />
@@ -45,6 +46,10 @@
   				<option-box id="ipx" label="Incapacidad Permanente Parcial" />
   				<option-box id="ipy" label="Incapacidad Permanente Total" selected=true/>
   			</select-box>
+			<select-auto id="tipoPension" placeholder="Selecciona el Tipo de Pensión deseada" required=true disabled=false>
+				<option id="ipp" label="Incapacidad Permanente Parcial" />
+				<option id="ipt" label="Incapacidad Permanente Total" />
+			</select-auto>
   		</panel>
 		<actions>
 			<action-group title="Cargos">
