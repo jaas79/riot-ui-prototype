@@ -30,7 +30,7 @@
            </td>
            <td >
               <div style="position:relative">
-               <button  each={actions}  data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" type="button" aria-expanded="false">{group} <span class="caret"></span>
+               <button  each={actions}  data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button" aria-expanded="false">{group} <span class="caret"></span>
                </button>
                <ul each={actions}  role="menu" class="dropdown-menu" >
                 <li each={actions}>

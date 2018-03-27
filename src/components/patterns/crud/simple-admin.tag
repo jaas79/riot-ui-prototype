@@ -6,7 +6,7 @@
              <inputbox placeholder={header.label} id={this.opts.id+index}> </inputbox> 
            </th>
            <th> 
-              <a href="/cliente-administrar/" onclick={addRow} class="btn btn-primary btn-sm">
+              <a href="/cliente-administrar/" onclick={addRow} class="btn btn-default btn-sm">
                 <i class="fa fa-plus"></i>
               </a>
            </th>
@@ -21,7 +21,7 @@
              {d}
            </td>
            <td>
-               <a href="/cliente-administrar/" onclick={removeRow} class="btn btn-danger btn-sm">
+               <a href="/cliente-administrar/" onclick={removeRow} class="btn btn-default btn-sm">
                  <i class="fa fa-trash"></i>
                </a>
            </td>

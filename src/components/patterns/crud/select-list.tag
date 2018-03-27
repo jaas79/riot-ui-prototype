@@ -29,10 +29,10 @@
     <br/>
     <br/>
     <br/>
-    <button onclick={addRow} class="btn btn-primary btn-sm">
+    <button onclick={addRow} class="btn btn-default btn-sm">
                 <i class="fa fa-arrow-right"></i>
     </button>
-    <button onclick={removeRow} class="btn btn-primary btn-sm">
+    <button onclick={removeRow} class="btn btn-default btn-sm">
                 <i class="fa fa-arrow-left"></i>
     </button>
   </div>
