@@ -29,15 +29,14 @@
         </div>
     </div>
 </modal-box>
+
 <search-box>
-  <div class="col-sm-3">
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder={opts.placeholder}>
-        <span class="input-group-btn">
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target=".{opts.link}">
-             <i class="fa fa-search"></i>
-            </button>
-        </span>
-    </div>
-  <div>
+  <div class="input-group">
+      <input type="text" class="form-control" placeholder={opts.placeholder}>
+      <span class="input-group-btn">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target=".{opts.link}">
+           <i class="fa fa-search"></i>
+          </button>
+      </span>
+  </div>
 </search-box>
