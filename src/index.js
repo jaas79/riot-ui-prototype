@@ -131,6 +131,7 @@ for (var j = 0; j < json.files.length; j++) {
 }
 require('riot-routehandler')
 var routes = [
+  { route: '/', tag: 'login' },
   { route: '/login/', tag: 'login' },
   { route: '/home/', tag: 'app' },
   { route: '/cliente-administrar/', tag: 'clienteadministrar' },
