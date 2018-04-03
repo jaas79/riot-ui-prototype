@@ -29,10 +29,10 @@
     <br/>
     <br/>
     <br/>
-    <button id={ "right-" + opts.id } onclick={addRightRow} class="btn btn-primary btn-sm">
+    <button id={ "right-" + opts.id } onclick={addRightRow} class="btn btn-default btn-sm">
                 <i class="fa fa-arrow-right"></i>
     </button>
-    <button id={ "left-" + opts.id } onclick={addLeftRow} class="btn btn-primary btn-sm">
+    <button id={ "left-" + opts.id } onclick={addLeftRow} class="btn btn-default btn-sm">
                 <i class="fa fa-arrow-left"></i>
     </button>
   </div>
