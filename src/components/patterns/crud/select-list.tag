@@ -47,24 +47,12 @@
         </tr>
     </thead>
     <tbody>
-       <tr each={row, index in rowstarget} class="" id={index+'tr'}> 
-           <td>			
-            <input type="checkbox" class="flat" name="tt-ckeck"> { opts.label }
-           </td>
-           <td each={d , i in row.data }>
-             {d}
-           </td>
-       </tr>
     </tbody>
     </table>
     <pagination-bar if={opts.pagination=="true"} label="Total de registros encontrados: {this.rows.length}" previous="Anterior" next="Siguiente"/>
    </div>
  </div>
      <script>
-      this.deleted=0;
-      this.headerstarget=[];
-      this.rowstarget=[];
-      this.rowstargettemp=[];
       this.headers    = JSON.parse(localStorage.getItem('header_'+ this.opts.id));
       this.rows       = JSON.parse(localStorage.getItem('rows_'+ this.opts.id));
       for (var i=0; i < this.rows.length; i++)
@@ -108,8 +96,6 @@
 	  this.addRightRow = function(e){
 		var tSource = document.getElementById("table_source");
 		var tTarget = document.getElementById("table_target").getElementsByTagName('tbody')[0];
-		
-		console.log(tTarget);
 		
 		var checkboxes = document.getElementsByName("ts-ckeck");
 		var totalCells = document.getElementById("table_source").rows[0].cells.length;
