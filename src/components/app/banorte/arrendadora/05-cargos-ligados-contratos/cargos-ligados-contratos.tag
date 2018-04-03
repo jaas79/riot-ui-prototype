@@ -12,7 +12,7 @@
            <option-box id="tipo-moneda-02" label="USD" />
          </select-box>
          <inputbox id="factor-moratorio" type="text" label="Factor Moratorio" value="" placeholder="Factor moratorio" required=true disabled=false minsize=3 maxsize=100 />
-         <date-picker id="fecha-consulta" type="date" label="Fecha Consulta" value="2018-02-01" placeholder="Ingresa la fecha de consulta" required=true disabled=false format="YYYY/MM/DD" mindate="2000-01-01" maxdate="2018-12-31" />
+         <date-picker id="fecha-consulta" type="date" label="Fecha Consulta" value="2018-02-01" placeholder="Ingresa la fecha de consulta" required=true disabled=false format="yyyy/mm/dd" mindate="2000-01-01" maxdate="2018-12-31" />
          <select-box id="adeudos" type="check" placeholder="Adeudos" required=true>
            <option-box id="adeudo-01" label="Rentas"/>
            <option-box id="adeudo-02" label="Opciones de compra" />
