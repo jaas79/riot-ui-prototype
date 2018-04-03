@@ -50,4 +50,10 @@
 		}
 		
 	</script>
+
+	<style>
+		.form-control-feedback.left {
+			left: 1px;
+		}
+	</style>
 </date-picker>
