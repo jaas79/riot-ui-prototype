@@ -11,9 +11,9 @@
          </tr>
        </thead>
        <tbody>
-       <tr class="" each={row, index in rows}> 
+       <tr class="" each={row, index in rows} id={ index + 'sr' }> 
            <td>
-             <input type="checkbox" id="check-all" class="flat">
+			 <input type="checkbox" class="flat" name="ts-ckeck"> { opts.label }
            </td>
            <td each={d , i in row.data }>
              {d}
@@ -29,10 +29,10 @@
     <br/>
     <br/>
     <br/>
-    <button onclick={addRow} class="btn btn-primary btn-sm">
+    <button id={ "right-" + opts.id } onclick={addRightRow} class="btn btn-primary btn-sm">
                 <i class="fa fa-arrow-right"></i>
     </button>
-    <button onclick={removeRow} class="btn btn-primary btn-sm">
+    <button id={ "left-" + opts.id } onclick={addLeftRow} class="btn btn-primary btn-sm">
                 <i class="fa fa-arrow-left"></i>
     </button>
   </div>
@@ -47,11 +47,9 @@
         </tr>
     </thead>
     <tbody>
-       <tr if={row.id!=-1} each={row, index in rowstarget} class="" id={index+'tr'}> 
-           <td>
-             <div class="icheckbox_flat-green" style="position: relative;" onclick={select} id={index}>
-             <input type="checkbox" id="check-all" class="flat" style="position: relative; opacity:0;">
-             </div>
+       <tr each={row, index in rowstarget} class="" id={index+'tr'}> 
+           <td>			
+            <input type="checkbox" class="flat" name="tt-ckeck"> { opts.label }
            </td>
            <td each={d , i in row.data }>
              {d}
@@ -96,35 +94,81 @@
       if (localStorage.getItem('actions_'+ this.opts.id) !== 'undefined'){
           this.actions    = JSON.parse(localStorage.getItem('actions_'+ this.opts.id));
       }
-
-    this.removeRow = function(e){
-          this.update();
+	  
+	  this.createCellVariables = function(numberCells){
+		var cells = [];
+		
+		for (var i=0; i<numberCells; i++){
+			cells[i] = "";
+		}
+		
+		return cells;
 	  }
 
-    this.addRow = function(e){
-         var l = this.rowstarget.length;
-         for (var r = 0; r <= this.rows.length; r++){
-           if (document.getElementById("table_source").rows[r].className == "selected") {
-            var data=[]
-            for (var s= 0; s < document.getElementById("table_source").rows[r].children.length; s++) {
-               data[s] = document.getElementById("table_source").rows[r].children[s].innerText;
-            }
-            data.splice(0,1);
-            this.rowstarget.push({"id":r-1+l, "data":data });
-          }
-         }
-    }
-
-    this.select = function(e){
-         this.deleted=this.deleted +1;
-         if (document.getElementById(e.item.index).className=="icheckbox_flat-green") {
-          document.getElementById(e.item.index).className="icheckbox_flat-green checked"
-          this.rowstarget[e.item.row.id].id = -1;
-          e.preventUpdate = true
-         } else {
-          document.getElementById(e.item.index).className="icheckbox_flat-green"
-          }
-    }
+	  this.addRightRow = function(e){
+		var tSource = document.getElementById("table_source");
+		var tTarget = document.getElementById("table_target").getElementsByTagName('tbody')[0];
+		
+		console.log(tTarget);
+		
+		var checkboxes = document.getElementsByName("ts-ckeck");
+		var totalCells = document.getElementById("table_source").rows[0].cells.length;
+		
+		console.log("Val1 = " + checkboxes.length);
+		
+		for (var r = 0; r < checkboxes.length; r++){
+			if ( checkboxes[r].checked ){
+				var newRow = tTarget.insertRow(tTarget.length);
+				var cells = this.createCellVariables(totalCells);
+				
+				for (var n = 0; n < totalCells; n++){
+					cells[n] = newRow.insertCell(n);
+				}
+				
+				cells[0].innerHTML = "<input type='checkbox' class='flat' name='tt-ckeck'>"
+				for (var n = 1; n < totalCells; n++){
+					cells[n].innerHTML = tSource.rows[r+1].cells[n].innerHTML;
+				}
+				
+				var index = tSource.rows[r+1].rowIndex;
+				tSource.deleteRow(index);
+				r--;
+				console.log(checkboxes.length);
+			}
+		}		
+	  }
+	  
+	  this.addLeftRow = function(e){
+		var tSource = document.getElementById("table_source").getElementsByTagName('tbody')[0];
+		var tTarget = document.getElementById("table_target");
+		
+		var checkboxes = document.getElementsByName("tt-ckeck");
+		var totalCells = document.getElementById("table_target").rows[0].cells.length;
+		
+		console.log("Val1 = " + checkboxes.length);
+		
+		for (var r = 0; r < checkboxes.length; r++){
+			if ( checkboxes[r].checked ){
+				var newRow = tSource.insertRow(tSource.length);
+				var cells = this.createCellVariables(totalCells);
+				
+				for (var n = 0; n < totalCells; n++){
+					cells[n] = newRow.insertCell(n);
+				}
+				
+				cells[0].innerHTML = "<input type='checkbox' class='flat' name='ts-ckeck'>"
+				for (var n = 1; n < totalCells; n++){
+					cells[n].innerHTML = tTarget.rows[r+1].cells[n].innerHTML;
+				}
+				
+				var index = tTarget.rows[r+1].rowIndex;
+				tTarget.deleteRow(index);
+				r--;
+				console.log(checkboxes.length);
+			}
+		}
+	  }
+	  
 
     </script>
 </select-list>
