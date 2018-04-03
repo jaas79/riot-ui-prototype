@@ -17,8 +17,8 @@
 					<inputbox id="horas-aplicadas" type="float" label="Horas aplicadas" value="6.50" precision=2 placeholder="Ingresa las horas aplicadas al proyecto" required=true disabled=false min=0.50 max=8.00 />
 					<inputbox id="cantidad" type="integer" label="Cantidad" value="100" placeholder="Ingresa la cantidad solicitada" required=true disabled=false min=1 max=100 />
 					<inputbox id="palabra-clave" type="password" label="Password" placeholder="Ingresa tu password" required=true disabled=false minsize=6 maxsize=8 />
-					<date-picker id="fecha-nacimiento" type="date" label="Fecha de Nacimiento" value="2018-02-10" placeholder="Ingresa tu fecha de nacimiento" required=true disabled=false format="YYYY/MM/DD" mindate="2018-02-02" maxdate="2018-02-15" />
-					<date-picker id="alta-seguro" type="date" label="Fecha de Alta en el Seguro" value="2018-02-15" placeholder="Ingresa la fecha de alta" required=true disabled=false format="YYYY/MM/DD" mindate="2018-02-02" maxdate="2018-02-20" />
+					<date-picker id="fecha-nacimiento" type="date" label="Fecha de Nacimiento" value="2018-02-10" placeholder="Ingresa tu fecha de nacimiento" required=true disabled=false format="yyyy/mm/dd" mindate="2018-02-02" maxdate="2018-02-15" />
+					<date-picker id="alta-seguro" type="date" label="Fecha de Alta en el Seguro" value="2018-02-15" placeholder="Ingresa la fecha de alta" required=true disabled=false format="yyyy/mm/dd" mindate="2018-02-02" maxdate="2018-02-20" />
 			</row>
   		</panel>
   		<panel label="Información adicional">

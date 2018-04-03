@@ -35,10 +35,10 @@
 	  </row>
     <row>
       <column size="col-md-4 col-xs-12">
-		    <date-picker id="salida" label="Salida" placeholder="Ingresa la fecha de salida" required=false disabled=false format="MM/DD/YYYY" />
+		    <date-picker id="salida" label="Salida" placeholder="Ingresa la fecha de salida" required=false disabled=false format="yyyy/mm/dd" />
 	    </column>
 	    <column size="col-md-4 col-xs-12">
-	    	<date-picker id="regreso" label="Regreso" placeholder="Ingresa la fecha de regreso" required=false disabled=false format="MM/DD/YYYY" />
+	    	<date-picker id="regreso" label="Regreso" placeholder="Ingresa la fecha de regreso" required=false disabled=false format="yyyy/mm/dd" />
 	    </column>
 	    <column size="col-md-4 col-xs-12">
 		  <select-box id="promo" placeholder="Código de promoción" type="select">
