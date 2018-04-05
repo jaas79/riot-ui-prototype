@@ -100,8 +100,6 @@
 		var checkboxes = document.getElementsByName("ts-ckeck");
 		var totalCells = document.getElementById("table_source").rows[0].cells.length;
 		
-		console.log("Val1 = " + checkboxes.length);
-		
 		for (var r = 0; r < checkboxes.length; r++){
 			if ( checkboxes[r].checked ){
 				var newRow = tTarget.insertRow(tTarget.length);
@@ -119,7 +117,6 @@
 				var index = tSource.rows[r+1].rowIndex;
 				tSource.deleteRow(index);
 				r--;
-				console.log(checkboxes.length);
 			}
 		}		
 	  }
@@ -130,8 +127,6 @@
 		
 		var checkboxes = document.getElementsByName("tt-ckeck");
 		var totalCells = document.getElementById("table_target").rows[0].cells.length;
-		
-		console.log("Val1 = " + checkboxes.length);
 		
 		for (var r = 0; r < checkboxes.length; r++){
 			if ( checkboxes[r].checked ){
@@ -149,8 +144,7 @@
 				
 				var index = tTarget.rows[r+1].rowIndex;
 				tTarget.deleteRow(index);
-				r--;
-				console.log(checkboxes.length);
+				r--;				
 			}
 		}
 	  }
