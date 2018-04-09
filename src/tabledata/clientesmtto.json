@@ -10,7 +10,8 @@
       "rows": [
         { "id": "E001", "data": ["E001", "Juan Pérez", "Bancario", 15000] },
         { "id": "E009", "data": ["E009", "Hortencia López", "Financiero", 18000] },
-		{ "id": "E010", "data": ["E010", "Abril Guevara", "Financiero", 20000] }
+		{ "id": "E010", "data": ["E010", "Abril Guevara", "Financiero", 20000] },
+		{ "id": "E010", "data": ["E020", "Rodrigo Acevedo", "Bancario", 12500] }
       ],
       "actions": [
         {
