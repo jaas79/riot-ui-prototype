@@ -61,6 +61,27 @@
 				<action-button id="agregar-creditos" label="Agregar creditos manuales" icon="fa fa-save" link="agregar-cargos" />
 			</action-group>
 		<actions>
+		<option-matrix type="Multi" id="metrix01" title="Roles vs Permissions">
+			<matrix-columns>
+				<matrix-column id="role01" title="Anonymus user" />
+				<matrix-column id="role02" title="Authenticaded user" />
+				<matrix-column id="role03" title="Admin user" />
+				<matrix-column id="role04" title="Editor" />
+			</matrix-columns>
+			<matrix-rows>
+				<matrix-group id="menu" title="Menu module">
+					<matrix-row id="permission01" title="Administer menu" />
+				</matrix-group>
+				<matrix-group id="node" title="Node module">
+					<matrix-row id="permission02" title="Access content" />
+					<matrix-row id="permission03" title="Administer content types" />
+					<matrix-row id="permission04" title="Administer nodes" />
+					<matrix-row id="permission05" title="Create page content" />
+					<matrix-row id="permission06" title="Create story content" />
+					<matrix-row id="permission07" title="Delete Users" />
+				</matrix-group>
+			 </matrix-rows>
+		</option-matrix>
     </formbox>
   </page>
 </clienteAgregar>

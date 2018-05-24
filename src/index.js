@@ -41,6 +41,7 @@ import './components/common/form/pagination-bar.tag'
 import './components/common/form/actions.tag'
 import './components/common/form/action-group.tag'
 import './components/common/form/action-button.tag'
+import './components/common/form/option-matrix.tag'
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'
 
