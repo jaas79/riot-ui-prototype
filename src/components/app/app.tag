@@ -49,6 +49,11 @@
 					<menu-item to="/reservaciones-promociones/" label="Promociones"/>
 				</side-menu>
 			</menu-section>
+		  <menu-section title="CasperTest">
+			<side-menu icon="fa fa-group" label="ClienteTest">
+				<menu-item to="/clientetest-add/" label="Add"/>
+			</side-menu>
+		  </menu-section>
 		</sidebar-menu>
 	</sidebar>
   <topbar></topbar>

@@ -1,4 +1,4 @@
-'use strict'
+﻿'use strict'
 
 if (module.hot) {
   module.hot.accept()
@@ -102,6 +102,11 @@ import './components/app/kukulkan-agencia/reservaciones-03.tag'
 import './components/app/kukulkan-agencia/reservaciones-04.tag'
 import './components/app/kukulkan-agencia/reservaciones-01-consultar.tag'
 
+// Componentes generados
+import './components/app/clientetest/clientetest-add.tag'
+import './components/app/clientetest/clientetest-admin.tag'
+import './components/app/clientetest/clientetest-form.tag'
+
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
 localStorage.setItem('messages', msgJSON)
@@ -153,6 +158,8 @@ var routes = [
   { route: '/reservaciones-01-buscar/', tag: 'reservaciones-01-buscar' },
   { route: '/reservaciones-01-buscar-vuelo-seleccionado/', tag: 'reservaciones-01-buscar-vuelo-seleccionado' },
   { route: '/reservaciones-fin/', tag: 'reservaciones-fin' },
-  { route: '/reservaciones-01-consultar/', tag: 'reservaciones-01-consultar' }
+  { route: '/reservaciones-01-consultar/', tag: 'reservaciones-01-consultar' },
+  { route: '/clientetest-add/', tag: 'clientetest-add' },
+  { route: '/clientetest-admin/', tag: 'clientetest-admin' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })

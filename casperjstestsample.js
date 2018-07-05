@@ -1,53 +1,55 @@
-var screensDir = 'testing/screenshoots/Uno.Uno/Cliente/create/'
-var screensCaptureDir = 'testing/captures/Uno.Uno/Cliente/create/'
+var screensDir = 'testing/screenshoots/CasperTest/ClienteTest/create/'
+var screensCaptureDir = 'testing/captures/CasperTest/ClienteTest/create/'
 var stepCounter = 0
 var stepCaptureCounter = 0
 
-casper.test.begin('Crear un Modelo de Cliente (Escenario Principal)', 4, function (test) {
-  // trigger: Administrador chooses CrearModeloAutoPage
-  casper.start('http://localhost:1337/#!/cliente-agregar/', function () {
+casper.test.begin('Creates a Model for ClienteTest (Principal Scenario)', 5, function (test) {
+  // trigger: Administrator chooses Add ClienteTest Page
+  casper.start('http://localhost:1337/#!/clientetest-add/', function () {
     this.viewport(1280, 850)
   })
 
-  // Step 01. System shows Cliente //CrearModeloAutoPage
+  // Step 01. System shows ClienteTest and Empty Fields
   casper.then(function () {
-    test.assertSelectorHasText('#cliente_agregar', 'Agregar Cliente')
+    test.assertSelectorHasText('#clientetest-add', 'Agregar ClienteTest')
   })
   
   
   casper.then(function () {
-      test.assertSelectorHasText('input#texto1-cliente', '')
+      test.assertSelectorHasText('input#numero-clientetest', '')
   })
   casper.then(function () {
-      test.assertSelectorHasText('input#pedido-cliente', '')
+      test.assertSelectorHasText('input#nombre-clientetest', '')
   })
   casper.then(function () {
-      test.assertSelectorHasText('input#enumref-cliente', '')
+      test.assertSelectorHasText('input#direccion-clientetest', '')
   })
 
-  // Step02. Administrador enters Cliente //CrearModeloAutoPage.CrearForm
+  // Step02. Administrator enters ClienteTest
   casper.then(function () {
     this.fill('formbox form', {
-      'nombre3': 'Cliente Guadalajara'
+      'Numero' : 'ClienteTest X Value' ,
+      'Nombre' : 'ClienteTest X Value' ,
+      'Direccion' : 'ClienteTest X Value' ,
+      
     }, false)
   })
 
-  // Step03. Administrador chooses Cliente //CrearModeloAutoPage.CrearForm.Guardar
+  // Step03. Administrator chooses ClienteTest 
   casper.then(function () {
-    // test.assertExists('#btn_guardar.btn', 'Botón [Guardar]')
-    casper.click('#btn_guardar.btn')
+    casper.click('a.btn')
   })
 
-  // Step04. System validates Cliente //CrearModeloAutoPage.CrearForm
+  // Step04. System validates ClienteTest 
 
-  // Step05. System creates Cliente //ModeloAutoServices.ModeloAuto
+  // Step05. System creates ClienteTest 
 
   // Post-condition
   casper.then(function () {
-    test.assertSelectorHasText('#page-title', 'Buscar Cliente')
+    test.assertSelectorHasText('#clientetest-admin', 'Administrar ClienteTest')
   })
-
-  // Fin del Caso de Uso
+  
+  // End of Use Case
   casper.run(function () {
     test.done()
   })

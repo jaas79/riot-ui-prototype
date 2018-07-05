@@ -1,0 +1,15 @@
+
+	{"ids":[
+	    {
+	      "id": "clientetest-results",
+	      "headers": [
+	      ],
+	      "rows": [
+	      	{ "id": "XXX", "data": [
+	      	] },
+	      	{ "id": "XXX", "data": [
+	      	] }
+	      ]
+	    }
+	  ]
+	}
