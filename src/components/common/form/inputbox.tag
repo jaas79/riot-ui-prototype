@@ -6,7 +6,7 @@
 		<span class= { iboxClass() }>
 			<i class={ iboxIcon() }></i>
 		</span>
-		<input type={opts.type} name={opts.id}3 class="form-control" name={opts.id}1 placeholder={opts.placeholder} value={opts.value} >
+		<input type={opts.type} id={opts.id} class="form-control" name={opts.id} placeholder={opts.placeholder} value={opts.value} >
 	</div>
 	<span id={opts.id}2 class="help-block"></span>
 
@@ -93,7 +93,7 @@
 		}
 
 		function checkTypeNumber(){
-			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
+			var myInputText = document.getElementsByTagName('input')[opts.id];
 			var mySpan = document.getElementsByTagName('span')[opts.id+'2'];
 
 			if ( myInputText.value ) {
@@ -137,7 +137,7 @@
 		}
 		
 		function checkEmail(){
-			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
+			var myInputText = document.getElementsByTagName('input')[opts.id];
 			var mySpan = document.getElementsByTagName('span')[opts.id+'2'];
 			
 			if (myInputText.value){
@@ -152,7 +152,7 @@
 		}
 
 		function checkEmptyValue(){
-			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
+			var myInputText = document.getElementsByTagName('input')[opts.id];
 			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
 
 			if ( ! myInputText.value && opts.required.toLowerCase() == 'true' ) {
@@ -163,7 +163,7 @@
 		}
 
 		function checkLength(){
-			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
+			var myInputText = document.getElementsByTagName('input')[opts.id];
 			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
 			
 			if (myInputText.value){
@@ -180,7 +180,7 @@
 		}
 
 		function checkMinMaxValue(){
-			var myInputText = document.getElementsByTagName('input')[opts.id+'3'];
+			var myInputText = document.getElementsByTagName('input')[opts.id];
 			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
 			var myValue = myInputText.value;
 
@@ -205,7 +205,7 @@
 		}
 		
 		function checkNumberOfLines(){
-			var tAreaElement = document.getElementsByTagName('textarea')[opts.id+'3'];
+			var tAreaElement = document.getElementsByTagName('textarea')[opts.id];
 			var mySpan = document.getElementsByTagName('span')[opts.id +'2'];
 			var nLines = tAreaElement.value.split(/\r*\n/).length;
 			
@@ -216,7 +216,7 @@
 			}
 		}
 
-		var iBoxComponent = document.getElementsByTagName('input')[opts.id+'3'];
+		var iBoxComponent = document.getElementsByTagName('input')[opts.id];
 
 		if(opts.required && opts.required.toLowerCase() == 'true'){
 			iBoxComponent.addEventListener("focus", checkEmptyValue, true);
@@ -257,8 +257,8 @@
 			iBoxComponent.parentNode.replaceChild(tAreaElement, iBoxComponent);
 
 			setAttributes(tAreaElement, {
-				"id": opts.id+'3',
-				"name": opts.id+'1',
+				"id": opts.id,
+				"name": opts.id,
 				"placeholder": opts.placeholder,
 				"required": opts.required,
 				"data-parsley-trigger": "change",
@@ -271,8 +271,8 @@
 			tAreaElement.value = opts.value;
 		}
 		
-		if( document.getElementsByTagName('textarea')[opts.id+'3'] ){
-			var tArea = document.getElementsByTagName('textarea')[opts.id+'3'];
+		if( document.getElementsByTagName('textarea')[opts.id] ){
+			var tArea = document.getElementsByTagName('textarea')[opts.id];
 			
 			if( opts.lines && Number(opts.lines) > 0 ){
 				tArea.addEventListener("focus", checkNumberOfLines, true);

@@ -1,6 +1,6 @@
 <cliente-agregar>
   <page title="Agregar Cliente" id="cliente-agregar">
-    <formbox title="Datos del Cliente" action="create" return="/clientes-admin/">
+    <formbox id="algo" title="Datos del Cliente" action="create" return="/clientes-admin/">
       <panel label="Generales">
         <row>
           <column size="col-md-6 col-xs-12">
