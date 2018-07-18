@@ -107,6 +107,9 @@ import './components/app/clientetest/clientetest-add.tag'
 import './components/app/clientetest/clientetest-admin.tag'
 import './components/app/clientetest/clientetest-form.tag'
 
+// Mandatory fields
+import './components/app/mandatory-fields/mandatory-test.tag'
+
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
 localStorage.setItem('messages', msgJSON)
@@ -160,6 +163,7 @@ var routes = [
   { route: '/reservaciones-fin/', tag: 'reservaciones-fin' },
   { route: '/reservaciones-01-consultar/', tag: 'reservaciones-01-consultar' },
   { route: '/clientetest-add/', tag: 'clientetest-add' },
-  { route: '/clientetest-admin/', tag: 'clientetest-admin' }
+  { route: '/clientetest-admin/', tag: 'clientetest-admin' },
+  { route: '/mandatory-test/', tag: 'mandatory-test' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })

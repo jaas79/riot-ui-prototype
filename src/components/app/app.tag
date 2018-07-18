@@ -54,6 +54,11 @@
 				<menu-item to="/clientetest-add/" label="Add"/>
 			</side-menu>
 		  </menu-section>
+		  <menu-section title="Mandatory Test">
+			<side-menu icon="fa fa-group" label="Mandatory Fields">
+				<menu-item to="/mandatory-test/" label="Test"/>
+			</side-menu>
+		  </menu-section>
 		</sidebar-menu>
 	</sidebar>
   <topbar></topbar>

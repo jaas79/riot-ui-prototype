@@ -6,7 +6,7 @@
 		<span class= { iboxClass() }>
 			<i class={ iboxIcon() }></i>
 		</span>
-		<input type={opts.type} id={opts.id} class="form-control" name={opts.id} placeholder={opts.placeholder} value={opts.value} >
+		<input type={opts.type} id={opts.id} class="form-control" name="form-inputbox" placeholder={opts.placeholder} value={opts.value} >
 	</div>
 	<span id={opts.id}2 class="help-block"></span>
 
@@ -258,7 +258,7 @@
 
 			setAttributes(tAreaElement, {
 				"id": opts.id,
-				"name": opts.id,
+				"name": "form-inputbox",
 				"placeholder": opts.placeholder,
 				"required": opts.required,
 				"data-parsley-trigger": "change",
