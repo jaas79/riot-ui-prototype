@@ -3,7 +3,7 @@
 </searchpanel>
 
 <searchcriteria>
-	<formbox title="Criterios de búsqueda" action="search" return="/cliente-administrar/">
+	<formbox title="Criterios de búsqueda" action="search" return="">
 		<row>
 			<column size="col-md-12 col-xs-12">
 				<yield/>
