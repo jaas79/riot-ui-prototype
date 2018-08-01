@@ -5,8 +5,8 @@
   "scripts": {
     "build": "webpack --config webpack-prod.config.js --colors",
     "dev": "webpack-dev-server --config webpack-dev.config.js --watch --colors",
-    "casper" : "casperjs test casperjstestsample.js",
-    "phantom" : "phantomjs --version"
+    "casper": "casperjs test casperjstestsample.js",
+    "phantom": "phantomjs --version"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-es2015-riot": "^1.1.0",
     "css-loader": "^0.23.1",
+    "cypress": "^3.0.3",
     "eslint": "^3.10.2",
     "eslint-config-standard": "^6.2.1",
     "eslint-loader": "^1.3.0",
