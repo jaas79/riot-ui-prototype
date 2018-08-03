@@ -20,13 +20,13 @@
           <submit-button to={ opts.return } action="delete"></submit-button>
           <submit-button to={ opts.return } action="return"></submit-button>
         </div>
-		<div if={opts.action=='search'}>
+		    <!--div if={opts.action=='search'} style="border: 1px solid lime;">
           <submit-button to={ opts.return } action="search"></submit-button>
-        </div>
-		<div if={opts.action=='custom'}>
+        </div-->
+		    <div if={opts.action=='custom'}>
           <div class="ln_solid"></div>
           <submit-button to={ opts.return } action="custom" icon={ opts.icon } caption={ opts.button } ></submit-button>
-		  <submit-button to={ opts.return } action="return"></submit-button>
+		      <submit-button to={ opts.return } action="return"></submit-button>
         </div>
       </div>
     </form>
