@@ -26,6 +26,12 @@
 			</div>
 			
 			<p hidden>4</p>
+			<div class="row">
+				<div class="col-md-4">
+				<select-box id="ClienteDir" type="select" placeholder="ClienteDir" data="clientedir-results" required=true fieldindex="1">
+				</select-box>
+				</div>
+			</div>
 		</formbox>
 	</page>
 </clientetest-add>	
