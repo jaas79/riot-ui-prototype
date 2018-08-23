@@ -28,7 +28,7 @@
           <edit-button if={opts.edit} to={ opts.edit }></edit-button>
           <delete-button if={opts.delete} to={ opts.delete }></delete-button>
         </td>
-        <td>
+        <td if={!opts.modal}>
           <div style="position:relative">
             <button each={actions} data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button" aria-expanded="false">
               <i class="fa fa-sitemap"></i> {group}
